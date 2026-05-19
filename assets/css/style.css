@@ -30859,3 +30859,64 @@ span.select2-selection.select2-selection--single:focus {
         font-size: 15px;
     }
 }
+
+
+/* ============================= */
+/* MANAGEMENT TEAM MOBILE FIX */
+/* ============================= */
+
+@media (max-width: 767px) {
+
+    /* Team card image fix */
+    .team-card .team-img,
+    .team-box .team-img,
+    .team-style1 .team-img {
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .team-card .team-img img,
+    .team-box .team-img img,
+    .team-style1 .team-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+    }
+
+    /* Team card alignment */
+    .team-card,
+    .team-box,
+    .team-style1 {
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Name spacing */
+    .team-card_title,
+    .team-box_title,
+    .team-style1 .team-title {
+        margin-top: 15px;
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    /* Position text */
+    .team-card_desig,
+    .team-box_desig,
+    .team-style1 .team-desig {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    /* Arrow button alignment */
+    .team-card .icon-btn,
+    .team-box .icon-btn,
+    .team-style1 .icon-btn {
+        right: 15px;
+        bottom: 15px;
+    }
+}
