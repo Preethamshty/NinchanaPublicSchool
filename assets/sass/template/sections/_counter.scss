@@ -1,0 +1,497 @@
+/* Counter 1 ---------------------------------- */
+.counter-card {
+    text-align: center;
+    .box-number {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 0px;
+        margin-top: -0.2em;
+        letter-spacing: -0.02em;
+        @include xl {
+            font-size: 40px;
+        }
+        @include lg {
+            font-size: 32px;
+        }
+    }
+    .box-text {
+        font-weight: 600;
+        font-size: 18px;
+        font-family: $title-font;
+        color: $white-color;
+        letter-spacing: -0.02em;
+        margin-top: 5px;
+        margin-bottom: -0.4em;
+        @include lg {
+            font-size: 16px;
+            letter-spacing: normal;
+        }
+        @include md {
+            font-weight: 500;
+            font-size: 14px;
+        }
+        @include sm {
+            font-size: 16px;
+        }
+    }
+}
+ 
+.counter-wrap1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0 80px;
+    .divider {
+        width: 2px;
+        height: 230px;
+        background: rgba($color: #ffffff, $alpha: 0.3);
+        &:last-of-type {
+            display: none;
+        }
+        @include md {
+            display: none;
+        }
+    }
+    @include xl {
+        padding: 0 60px;
+        .divider {
+            height: 200px;
+        }
+    }
+    @include lg {
+        padding: 0 40px;
+        .divider {
+            height: 180px;
+        }
+    }
+    @include md {
+        padding: 50px 30px;
+    }
+    @include sm {
+        flex-wrap: wrap;
+        gap: 40px 0;
+        .counter-card {
+            flex: 50%;
+        }
+    }
+    @include xs {
+        .counter-card {
+            flex: 100%;
+            text-align: center;
+        }
+    }
+}
+/* Counter 2 ---------------------------------- */
+.counter-wrap2 {
+    display: flex;
+    justify-content: space-between;
+    @include lg {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include xs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.counter-card2 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    @include xs {
+        justify-content: center;
+    }
+    .box-icon {
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        border: 2px solid $white-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+        @include xl {
+            height: 64px;
+            width: 64px;
+        }
+    }
+    .box-title {
+        margin-bottom: -0.3em;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        max-width: 124px;
+        color: $white-color;
+        line-height: 1.5em;
+    }
+}
+
+/* Counter 4 ---------------------------------- */
+.counter-wrap4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0 80px;
+    background: $white-color;
+    box-shadow: 0px 10px 50px rgba(0, 30, 66, 0.08);
+    .divider {
+        width: 2px;
+        height: 230px;
+        background: rgba($color: #D3DBE2, $alpha: 0.3);
+        &:last-of-type {
+            display: none;
+        }
+        @include md {
+            display: none;
+        }
+    }
+    @include xl {
+        padding: 0 60px;
+        .divider {
+            height: 200px;
+        }
+    }
+    @include lg {
+        padding: 0 40px;
+        .divider {
+            height: 180px;
+        }
+    }
+    @include md {
+        padding: 50px 30px;
+    }
+    @include sm {
+        flex-wrap: wrap;
+        gap: 40px 0;
+        .counter-card {
+            flex: 50%;
+        }
+    }
+    @include xs {
+        .counter-card {
+            flex: 100%;
+            text-align: center;
+        }
+    }
+}
+
+/* Counter 5 ---------------------------------- */
+.counter-wrap5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0;
+    padding: 0 80px;
+    .divider {
+        width: 2px;
+        height: 180px;
+        background: rgba($color: #D3DBE2, $alpha: 0.3);
+        &:last-of-type {
+            display: none;
+        }
+        @include md {
+            display: none;
+        }
+    }
+    @include xl {
+        padding: 0 60px;
+        .divider {
+            height: 160px;
+        }
+    }
+    @include lg {
+        padding: 0;
+        .divider {
+            height: 140px;
+        }
+    }
+    @include md {
+        padding: 0;
+    }
+    @include sm {
+        flex-wrap: wrap;
+        gap: 40px 0;
+        .counter-card {
+            flex: 50%;
+        }
+    }
+    @include xs {
+        .counter-card {
+            flex: 100%;
+            text-align: center;
+        }
+    }
+}
+.counter-card.style5 {
+    .box-text {
+        margin-bottom: 5px;
+        margin-top: -0.4em;
+    }
+    .box-number {
+        margin-top: 0px;
+        margin-bottom: -0.2em;
+        -webkit-text-stroke: 1px $title-color;
+        color: transparent;
+        transition: 0.4s;
+        @include md {
+            letter-spacing: normal;
+        }
+    }
+    &:hover {
+        .box-number {
+            color: $title-color;
+        }
+    }
+}
+
+/* Counter 6 ---------------------------------- */
+.counter-wrap6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background: $white-color;
+    .divider {
+        width: 2px;
+        height: 85px;
+        background: rgba($color: #D3DBE2, $alpha: 0.3);
+        &:last-of-type {
+            display: none;
+        }
+        @include xl {
+            height: 80px;
+        }
+        @include lg {
+            height: 70px;
+        }
+        @include md {
+            display: none;
+        }
+    }
+    @include sm {
+        flex-wrap: wrap;
+        gap: 40px 0;
+        .counter-card {
+            flex: 50%;
+        }
+    }
+    @include xs {
+        .counter-card {
+            flex: 100%;
+            text-align: center;
+        }
+    }
+}
+.counter-card.style6 {
+    .box-number {
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 0px;
+        margin-top: -0.25em;
+        letter-spacing: -0.02em;
+        @include xl {
+            font-size: 56px;
+        }
+        @include lg {
+            font-size: 48px;
+        }
+        @include md {
+            font-size: 40px;
+        }
+        @include xs {
+            font-size: 32px;
+        }
+    }
+}
+
+/* Counter 7 ---------------------------------- */
+.counter-wrap7 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 21px;
+    position: relative;
+    z-index: 4;
+    margin: 0 0 21px 21px;
+    @include md {
+        gap: 10px;
+        margin: 0 0 10px 10px;
+    }
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+        gap: 0;
+    }
+    @include xs {
+        display: block;
+    }
+}
+.counter-card.style7 {
+    border-radius: 50%;
+    padding: 113px 0;
+    position: relative;
+    &:nth-child(3),
+    &:nth-child(1) {
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 50% -21px -21px -21px;
+            background: $light-color3;
+            z-index: -1;
+            border-radius: 0 0 50% 50%/ 0 0 100% 100%;
+            @include md {
+                inset: 50% -10px -10px -10px;
+            }
+            @include sm {
+                display: none;
+            }
+        }
+    }
+    .box-number {
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: -0.1em;
+    }
+    .box-text {
+        color: $body-color;
+        margin-top: 0;
+    }
+    @include ml {
+        padding: 101.5px 0;
+    }
+    @include xl {
+        padding: 85px 0;
+    }
+    @include lg {
+        padding: 71px 0;
+        .box-number {
+            font-size: 50px;
+        }
+    }
+    @include md {
+        padding: 53px 14px;
+        .box-number {
+            font-size: 40px;
+        }
+    }
+    @include sm {
+        padding: 88px 14px;
+        border: 10px solid $theme-color;
+        &:nth-child(1) {
+            border-color: $theme-color2;
+        }
+        &:nth-child(2) {
+            border-color: $theme-color2;
+        }
+    }
+    @include xs {
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Counter 8 ---------------------------------- */
+.counter-wrap8 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 21px;
+    position: relative;
+    z-index: 4;
+    margin: 0 21px 21px 21px;
+    @include md {
+        gap: 7px;
+        margin: 0 7px 7px 7px;
+    }
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+        gap: 0;
+    }
+    @include xs {
+        display: block;
+    }
+}
+.counter-card.style8 {
+    border-radius: 50%;
+    padding: 113px 0;
+    position: relative;
+    background: $white-color;
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 2px dashed $theme-color;
+        border-radius: 50%;
+        animation: spin 10s linear infinite;
+        opacity: 0;
+        transition: 0.4s;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 50% -21px -21px -21px;
+        background: $light-color3;
+        z-index: -1;
+        border-radius: 0 0 50% 50%/ 0 0 100% 100%;
+        @include md {
+            inset: 50% -7px -7px -7px;
+        }
+        @include sm {
+            display: none;
+        }
+    }
+    .box-number {
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: -0.1em;
+    }
+    .box-text {
+        color: $body-color;
+        margin-top: 0;
+    }
+    &.item-active {
+        &:before {
+            opacity: 1;
+        }
+    }
+    @include ml {
+        padding: 99px 0;
+    }
+    @include xl {
+        padding: 84px 0;
+        .box-number {
+            font-size: 50px;
+            margin-bottom: 5px;
+        }
+    }
+    @include lg {
+        padding: 65px 0;
+        .box-number {
+            font-size: 46px;
+        }
+    }
+    @include md {
+        padding: 49.5px 10px;
+        .box-number {
+            font-size: 40px;
+        }
+        .box-text {
+            font-size: 13px;
+        }
+    }
+    @include sm {
+        padding: 86px 14px;
+        border: 10px solid $light-color3;
+    }
+    @include xs {
+        max-width: 250px;
+        padding: 82px 14px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

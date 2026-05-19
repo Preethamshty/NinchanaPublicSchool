@@ -1,0 +1,281 @@
+
+/* Contact Page 1 ---------------------------------- */ 
+.contact-map {
+    line-height: 0px;
+    margin: 0 auto;
+    iframe {
+        width: 100%;
+        height: 500px;
+        border-radius: 0;
+        @include xs {
+            height: 300px;
+        }
+    }
+}
+.contact-area-1 {
+    .row.gy-4 {
+        align-items: stretch;
+        > [class*="col-"] {
+            display: flex;
+        }
+    }
+}
+
+.contact-card {
+    background: $white-color;
+    border-radius: 24px;
+    box-shadow: 0px 10px 50px rgba(0, 70, 59, 0.1);
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .box-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+    .box-icon {
+        @include equal-size-lineHeight(70px);
+        font-size: 26px;
+        color: $white-color;
+        background-color: $theme-color;
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        flex: none;
+        margin-bottom: 40px;
+        i {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-top: -0.38em;
+        margin-bottom: 3px;
+    }
+    .box-text {
+        line-height: 24px;
+        max-width: 100%;
+        letter-spacing: -0.02em;
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+        a {
+            max-width: 100%;
+            color: inherit;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .box-link {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $title-font;
+        letter-spacing: -0.02em;
+        color: $title-color;
+        display: block;
+        margin-bottom: -0.2em;
+        margin-top: auto;
+        padding-top: 24px;
+        max-width: 100%;
+        line-height: 1.45;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    &:hover {
+        .box-icon {
+            i {
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+    @include xl {
+        padding: 30px;
+        .box-icon {
+            margin-bottom: 30px;
+        }
+    }
+    @include lg {
+        padding: 40px;
+    }
+    @include md {
+        border-radius: 20px;
+    }
+    @include vxs {
+        padding: 30px;
+    }
+}
+
+.about-contact {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.th-widget-contact .info-box,
+.contact-info-wrap .contact-info,
+.footer-contact-wrap .footer-contact {
+    a[href^="tel:"],
+    a[href^="mailto:"] {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+.contact-page-form {
+    border-radius: 24px;
+    padding: 60px;
+    background: $smoke-color;
+    .form-title {
+        margin-top: -0.3em;
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 46px;
+        @include ml {
+            font-size: 42px;
+            margin-bottom: 36px;
+        }
+        @include lg {
+            font-size: 40px;
+        }
+        @include md {
+            margin-bottom: 24px;
+        }
+        @include sm {
+            font-size: 34px;
+        }
+        @include xs {
+            font-size: 28px;
+        }
+        @include vxs {
+            margin-bottom: 16px;
+        }
+    }
+    @include md {
+        border-radius: 20px;
+        padding: 40px;
+    }
+    @include vxs {
+        padding: 30px;
+    }
+}
+
+/* Contact Sec 1 ---------------------------------- */ 
+.contact-thumb1-1 {
+    border-radius: 24px;
+    overflow: hidden;
+    display: inline-block;    
+}
+
+/* Contact Sec 2 ---------------------------------- */ 
+.contact-bg-shape2-1,
+.contact-bg-shape2-2 {
+    @include xxl {
+        display: none;
+    }
+}
+.contact-counter {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    gap: 24px;
+    flex-wrap: wrap;
+    @include xl {
+        gap: 10px;
+    }
+    @include lg {
+        justify-content: start;
+        gap: 30px;
+    }
+    @include xs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    li {
+        list-style: none;
+        text-align: center;
+    }
+    .count-number {
+        font-size: 40px;
+        font-weight: 700;
+        font-family: $title-font;
+        width: 130px;
+        height: 124px;
+        background: #F1EEE3;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $title-color;
+        letter-spacing: -0.02em;
+        margin-left: auto;
+        margin-right: auto;
+        @include  ml {
+            width: 100px;
+            height: 100px;
+            font-size: 30px;
+        }
+    }
+    .count-title {
+        display: block;
+        background: $theme-color2;
+        border-radius: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $title-color;
+        padding: 5px 0;
+    }
+}
+.contact-form.style2 {
+    border-radius: 24px;
+    padding: 60px;
+    .sec-title {
+        font-size: 32px;
+    } 
+    @include xs {
+        padding: 60px 40px;
+    }
+    @include vxs {
+        padding: 60px 30px;
+    }
+}
+
+/* Contact Sec 4 ---------------------------------- */ 
+.contact-form-4 {
+    border-radius: 24px;
+    padding: 60px;
+    background: $smoke-color4;
+    .sec-title {
+        font-size: 32px;
+        font-weight: 700;
+        @include ml {
+            font-size: 28px;
+        }
+        @include lg {
+            font-size: 24px;
+        }
+        @include xs {
+            font-size: 28px;
+        }
+    }
+    @include md {
+        border-radius: 20px;
+        padding: 40px;
+    }
+    @include vxs {
+        padding: 30px;
+    }
+}

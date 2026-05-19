@@ -1,0 +1,48 @@
+/* Project Card -------------------------------*/
+.project-slider1 {
+    .swiper-wrapper {
+        align-items: center;
+    }
+}
+.project-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    .box-img {
+        overflow: hidden;
+        margin-bottom: 32px;
+        border-radius: 16px;
+        transition: 0.4s;
+        display: inline-block;
+        img {
+            width: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+        &.radius-style1 {
+            border-radius: 200px;
+        }
+        &.radius-style2 {
+            border-radius: 200px 32px 32px 32px;
+        }
+    }
+    .box-title {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;        
+    }
+    .box-text {
+        margin-bottom: -0.2em;
+        max-width: 252px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &:hover {
+        .box-img {
+            img {
+                transform: scale(1.12) rotate(-2deg);
+            }
+        }
+    }
+}

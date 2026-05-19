@@ -1,0 +1,823 @@
+.footer-wrapper {
+    --border-color: rgba(255, 255, 255, 0.3);
+    --body-color: #829592;
+    position: relative;
+    z-index: 2;
+    background-color: $black-color3;
+    overflow: hidden;
+    .social-links a {
+        margin: 0 30px 0 0;
+    }
+}
+.widget-area {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    @include lg {
+        padding-bottom: 30px;
+    }
+}
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.footer-links {
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        font-family: $body-font;
+        display: inline-flex;
+        margin-right: 12px;
+        position: relative;
+        align-items: center;
+        gap: 16px;
+        &:after {
+            content: "";
+            height: 1px;
+            width: 10px;
+            background-color: $theme-color2;
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            @include vxs {
+                display: none;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+            padding-right: 0;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    a {
+        font-family: inherit;
+        color: $white-color;
+        &:hover {
+            color: $theme-color2;
+        }
+    }
+}
+.copyright-wrap {
+    padding: 24.25px 0;
+    background-size: 100% auto;
+    background-color: $theme-color;
+    .copyright-text {
+        color: $white-color;
+        a {
+            font-size: 18px;
+            color: $theme-color2;
+            &:hover {
+                color: $white-color;
+            }
+        }
+    }
+    &.bg-title {
+        .copyright-text {
+            a {
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+/*footer default**********************/
+.subscribe-box {
+    position: relative;
+    z-index: 1;
+    padding: 120px 0 80px;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+    &_title {
+        color: $white-color;
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: capitalize;
+        letter-spacing: -0.02em;
+        line-height: 1.166;
+        margin-bottom: 0px;
+        margin-top: -0.25em;
+        @include ml {
+            font-size: 40px;
+        }
+        @include xl {
+            font-size: 38px;
+        }
+        @include lg {
+            font-size: 36px;
+        }
+        @include md {
+            font-size: 32px;
+            letter-spacing: normal;
+        }
+    }
+    &_text {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $title-font;
+        margin-bottom: -0.45em;
+    }
+    @include lg {
+        text-align: center;
+        padding-top: 80px;
+    }
+    @include xs {
+        padding: 60px 0;
+        .subscribe-box_title {
+            font-size: 24px;
+            line-height: normal;
+        }
+    }
+}
+.newsletter-form {
+    display: flex;
+    gap: 20px 16px;
+    align-items: center;
+    .form-group {
+        margin-bottom: 0;
+        width: 100%;
+        input {
+            background: transparent;
+            border: 1px solid $body-color;
+            color: $white-color;
+            font-size: 14px;
+            height: 64px;
+            &::placeholder {
+                color: $white-color;
+            }
+            @include lg {
+                height: 56px;
+            }
+        }
+    }
+    .th-btn {
+        min-width: auto;
+        flex: none;
+        padding: 24px 40px;
+        @include lg {
+            padding: 20px 40px;
+        }
+    }
+}
+.copyright-text {
+    margin: 0;
+    a {
+        color: $theme-color;
+        &:hover {
+            color: $white-color;
+        }
+    }
+}
+.info-box {
+	display: flex;
+    gap: 16px;
+    .box-icon {
+        flex: none;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba($color: #EDEDED, $alpha: 0.3);
+        color: $white-color;
+        border-radius: 50%;
+    }
+    .box-details {
+        align-self: center;
+        margin-top: -0.3em;
+        min-width: 0;
+        flex: 1;
+    }
+    .box-text {
+        letter-spacing: -0.02em;
+        &:not(:last-child) {
+            margin-bottom: 1px;
+        }
+    }
+    .box-link {
+        color: inherit;
+        max-width: 100%;
+        line-height: 1.5;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        &:hover {
+            color: $theme-color2;
+        }
+    }
+    &.style2 {
+        .box-text {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $body-font;
+        }
+        .box-link {
+            color: $white-color;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: $title-font;
+            display: block;
+            margin-top: 4px;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+}
+
+.newsletter-widget {
+    .newsletter-form {
+        margin-top: -0.3em;
+        position: relative;
+        .form-group {
+            input {
+                backdrop-filter: none;
+                font-size: 14px;
+                height: 48px;
+                padding: 0 120px 0 25px;
+            }
+            &:after {
+                width: 100%;
+            }
+        }
+        .th-btn {
+            min-width: auto;
+            font-size: 16px;
+            font-weight: 400;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            display: flex;
+            align-items: center;
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .form-group {
+        margin-bottom: 0;
+    }
+    .check-group {
+        margin-bottom: 20px;
+    }
+}
+
+@include md {
+    .newsletter-wrap {
+        padding: 40px;
+        .newsletter-title {
+            font-size: 30px;
+        }
+        .newsletter-text {
+            font-size: 16px;
+        }
+    }
+}
+
+@include sm {
+    .newsletter-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        .newsletter-title {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@include xs {
+    .newsletter-wrap {
+        padding: 40px 20px;
+        .newsletter-title {
+            font-size: 24px;
+        }
+        .newsletter-form {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .footer-wrapper {
+        .newsletter-form {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@include md {
+    .footer-wrapper {
+        .widget-area {
+            padding-top: $space-mobile;
+            padding-bottom: 30px;
+        }
+    }
+    .copyright-text {
+        text-align: center;
+    }
+}
+
+/* footer default ---------------------------------- */
+.footer-default {
+    position: relative;
+    --body-color: #D3DBE2;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &:after {
+        display: none;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.15);
+        z-index: -1;
+        pointer-events: none;
+    }
+    @include md {
+        background-position: center 60%;
+    }
+    @include xs {
+        background-size: cover;
+        background-position: center center;
+    }
+    @include sm {
+        .th-widget-about {
+            max-width: none;
+        }
+    }
+}
+/* footer 1 ---------------------------------- */
+.footer-layout1 {
+    background: transparent;    
+    --body-color: #D3DBE2;
+    .subscribe-box {
+        margin-bottom: -150px;
+        position: relative;
+        z-index: 2;
+        border-radius: 40px;
+        text-align: center;
+        padding: 60px;
+        overflow: hidden;
+        @include sm {
+            padding: 60px 40px;
+        }
+        .subscribe-bg-shape1-4,
+        .subscribe-bg-shape1-3 {
+            @include xxl {
+                display: none;
+            }
+        }
+        .subscribe-box_title {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            @include lg {
+                font-size: 40px;
+            }
+            @include md {
+                font-size: 36px;
+            }
+            @include sm {
+                font-size: 30px;
+            }
+        }
+        .subscribe-box_text {
+            font-size: 18px;
+            font-weight: 600;
+            font-family: $title-font;
+            letter-spacing: -0.02em;
+            margin-top: 5px;
+            @include sm {
+                font-size: 16px;
+            }
+        }
+        .newsletter-form {
+            max-width: 584px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 34px;
+            background: $white-color;
+            border-radius: 50px;
+            padding: 4px;
+            @include xs {
+                background: transparent;
+            }
+            .form-group input {
+                height: 56px;
+                border: 0;
+                color: $title-color;
+                padding-right: 0;
+                &::placeholder {
+                    color: $title-color;
+                }
+                @include xs {
+                    background: $white-color;
+                }
+            }
+            .th-btn {
+                height: 56px;
+            }
+        }
+    }
+    .widget-area {
+        padding-bottom: 70px;
+        padding-top: calc(var(--section-space) + 150px);
+        position: relative;
+        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $theme-color;
+            mix-blend-mode: hue;
+            z-index: -2;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 6, 5, 0.7);
+            z-index: -1;
+        }
+        @include md {
+            padding-bottom: 30px;
+        }
+    }
+    .footer-text {
+        max-width: 670px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+}
+/* footer 2 ---------------------------------- */
+.footer-layout2 {
+    background: transparent;    
+    --body-color: #556377;
+    .subscribe-box {
+        position: relative;
+        z-index: 2;
+        border-radius: 0;
+        padding: 80px 0;
+        overflow: hidden;
+        .subscribe-bg-shape1-4,
+        .subscribe-bg-shape1-3 {
+            @include xxl {
+                display: none;
+            }
+        }
+        .subscribe-box_title {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            @include lg {
+                font-size: 40px;
+            }
+            @include md {
+                font-size: 36px;
+            }
+            @include sm {
+                font-size: 30px;
+            }
+        }
+        .subscribe-box_text {
+            font-size: 18px;
+            font-weight: 600;
+            font-family: $title-font;
+            letter-spacing: -0.02em;
+            margin-top: 5px;
+            @include sm {
+                font-size: 16px;
+            }
+        }
+        .newsletter-form {
+            max-width: 584px;
+            margin-left: auto;
+            background: $white-color;
+            border-radius: 50px;
+            padding: 4px;
+            .form-group input {
+                height: 56px;
+                border: 0;
+                color: $title-color;
+                padding-right: 0;
+                background: $white-color;
+                &::placeholder {
+                    color: $title-color;
+                }
+            }
+            .th-btn {
+                height: 56px;
+                color: $white-color;
+            }
+            @include lg {
+                margin-right: auto;
+                margin-top: 40px;
+            }
+            @include xs {
+                background: transparent;
+            }
+        }
+    }
+    .widget-area {
+        padding-bottom: 70px;
+        position: relative;
+        z-index: 1;
+        @include md {
+            padding-bottom: 30px;
+        }
+    }
+    .widget_title {
+        color: $title-color;
+    }
+    .info-box.style2 .box-link {
+        color: $title-color;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .footer-text {
+        max-width: 670px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+    .copyright-wrap {
+        background: transparent;
+        border-top: 1px solid rgba($color: #00112B, $alpha: 0.2);
+        .copyright-text {
+            color: $title-color;
+            a {
+                color: $title-color;
+                &:hover {
+                    color: $theme-color2;
+                }
+            }
+        }
+        .footer-links a {
+            color: $title-color;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+        .footer-links li:after {
+            background: $title-color;
+        }
+    }
+}
+
+/* footer 3 ---------------------------------- */
+.footer-layout3 {
+    position: relative;
+    --body-color: #ffffff;
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $theme-color;
+        mix-blend-mode: hue;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba($color: #00112B, $alpha: 0.9);
+        z-index: -1;
+    }
+    .footer-top {
+        max-width: 1560px;
+        margin-left: auto;
+        margin-right: auto;
+        border-left: 1px solid rgba($color: #556377, $alpha: 0.6);
+        border-right: 1px solid rgba($color: #556377, $alpha: 0.6);
+        border-bottom: 1px solid rgba($color: #556377, $alpha: 0.6);
+        .footer-contact-wrap {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            justify-content: space-between;
+            align-items: center;
+            .divider {
+                background: rgba($color: #556377, $alpha: 0.6);
+                height: 140px;
+                width: 1px;
+            }
+            .footer-contact {
+                display: flex;
+                gap: 15px;
+                padding: 30px 0;
+                .footer-contact_icon {
+                    border-radius: 16px;
+                    background: rgba(24, 130, 255, 0.23);
+                    border: 2px solid rgba(24, 130, 255, 0.62);
+                    backdrop-filter: blur(18px);
+                    color: var(--white-color);
+                    font-size: 24px;
+                    --btn-size: 60px;
+                    position: relative;
+                    z-index: 1;
+                }
+                .footer-contact_text {
+                    letter-spacing: -0.02em;
+                    color: $white-color;
+                    margin-top: -0.2em;
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                }
+                .footer-contact_link {
+                    font-size: 24px;
+                    font-weight: 700;
+                    font-family: $title-font;
+                    letter-spacing: -0.02em;
+                    color: $white-color;
+                    display: block;
+                    margin-bottom: -0.15em;
+                    max-width: 100%;
+                    line-height: 1.45;
+                    word-break: break-word;
+                    overflow-wrap: break-word;
+                    &:hover {
+                        color: $theme-color2;
+                    }
+                    @include lg {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        @include xxl {
+            border-left: 0;
+            border-right: 0;
+        }
+        @include md {
+            .footer-contact-wrap {
+                grid-template-columns: 100%;
+                .divider {
+                    display: none;
+                }
+                .footer-contact:not(:last-child) {
+                    border-bottom: 1px solid rgba($color: #556377, $alpha: 0.6);
+                }
+            }
+        }
+    }
+    .widget-area {
+        max-width: 1560px;
+        margin-left: auto;
+        margin-right: auto;
+        border-left: 1px solid rgba($color: #556377, $alpha: 0.6);
+        border-right: 1px solid rgba($color: #556377, $alpha: 0.6);
+        border-bottom: 1px solid rgba($color: #556377, $alpha: 0.6);
+        padding-bottom: 70px;
+        @include xxl {
+            border-left: 0;
+            border-right: 0;
+        }
+        @include md {
+            padding-bottom: 30px;
+        }
+    }
+}
+/* footer 4 ---------------------------------- */
+.footer-layout4 {
+    --body-color: #8D98A9;
+}
+/* footer 5 ---------------------------------- */
+.footer-layout5 {
+    --body-color: #D3DBE2;
+    .copyright-wrap {
+        background: transparent;
+        border-top: 1px solid rgba($color: #FFFFFF, $alpha: 0.2);
+    }
+}
+/* footer 6 ---------------------------------- */
+.footer-layout6 {
+    background: linear-gradient(180deg, #FCF8FF 0%, #B4A8FE 100%);
+    --body-color: #08001C;
+    .subscribe-box {
+        border-bottom: 1px solid $white-color;
+    }
+    .newsletter-form .form-group input {
+        border: 0;
+        background: $white-color;
+        color: $title-color;
+        &::placeholder {
+            color: $title-color;
+        }
+    }
+    .footer-widget .widget_title {
+        color: $title-color;
+    }
+    .info-box .box-icon {
+        border: 1px solid rgba($color: #08001C, $alpha: 0.3);
+        color: $title-color;
+    }
+    .info-box .box-link {
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .copyright-wrap {
+        background: transparent;
+        border-top: 1px solid rgba($color: #FFFFFF, $alpha: 0.2);
+    }
+}
+/* footer layout7 ---------------------------------- */
+.footer-layout7 {
+    position: relative;
+    --body-color: #D3DBE2;
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $theme-color2;
+        mix-blend-mode: hue;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 6, 5, 0.7);
+        z-index: -1;
+    }
+
+    .copyright-wrap .copyright-text a {
+        color: $white-color;
+        &:hover {
+            color: $white-color;
+            text-shadow: -0.3px -0.3px 0 $white-color, 0.3px 0.3px $white-color;
+        }
+    }
+    .footer-links a {
+        &:hover {
+            color: $white-color;
+            text-shadow: -0.3px -0.3px 0 $white-color, 0.3px 0.3px $white-color;
+        }
+    }
+    .footer-links li:after {
+        background: $white-color;
+    }
+    @include xxl {
+        background-image: none !important;
+    }
+    @include sm {
+        .th-widget-about {
+            max-width: none;
+        }
+    }
+}
+
+/* footer 8 ---------------------------------- */
+.footer-layout8 {
+    background: transparent;    
+    --body-color: #556377;
+    .widget-area {
+        padding-bottom: 70px;
+        position: relative;
+        z-index: 1;
+        @include md {
+            padding-bottom: 30px;
+        }
+    }
+    .widget_title {
+        color: $title-color;
+    }
+    .info-box.style2 .box-link {
+        color: $title-color;
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    .copyright-wrap {
+        background: transparent;
+        border-top: 1px solid rgba($color: #00112B, $alpha: 0.2);
+        .copyright-text {
+            color: $title-color;
+            a {
+                color: $title-color;
+                &:hover {
+                    color: $theme-color2;
+                }
+            }
+        }
+        .footer-links a {
+            color: $title-color;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+        .footer-links li:after {
+            background: $title-color;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+//Campaign Area 1---------------------------------------
+.campaign-area-1 {
+    padding-bottom: calc(var(--section-space) + 80px);
+}
+.campaign-bg-shape1-3 {
+    height: 80px;
+}
+.campaign-wrap1 {
+    display: flex;
+    border-radius: 30px;
+    background: $white-color;
+    padding: 30px;
+    gap: 30px;
+    .campaign-thumb {
+        border-radius: 15px;
+        overflow: hidden;
+        flex: none;
+        position: relative;
+        .campaign-thumb-bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 130px;
+            opacity: 0.25;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .esculion-form-v1 {
+        border: 0;
+        padding: 0;
+        border-radius: 0;
+        align-self: center;
+        .esculion-card_progress-wrap {
+            margin-top: 32px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid $border-color;
+            padding-bottom: 28px;
+            .progress {
+                background: #C5CECC;
+                border-radius: 30px;
+                height: 6px;
+                overflow: inherit;
+                .progress-bar {
+                    background: $theme-color;
+                    border-radius: 30px;
+                    position: relative;
+                    overflow: inherit;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        background: $white-color;
+                        right: 0;
+                        top: 50%;
+                        border: 5px solid  $theme-color;
+                        border-radius: 50%;
+                        transform: translate(0, -50%);
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+        .esculion-card_progress-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+            .esculion-card_goal,
+            .esculion-card_raise {
+                font-size: 16px;
+                font-weight: 600;
+                font-family: $title-font;
+                color: $title-color;
+                .box-number {
+                    display: block;
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-top: 8px;
+                }
+            }
+            .esculion-card_goal {
+                text-align: end;
+                color: $theme-color;
+            }
+        }
+        .escule-amount-button-list {
+            border-bottom: 0;
+            padding-bottom: 0;
+            margin-bottom: 40px;
+        }
+        .btn-wrap {
+            gap: 12px;
+        }
+        .escule-input {
+            margin-bottom: 0;
+            background: $smoke-color;
+            border-radius: 100px;
+            input {
+                box-shadow: none;
+                background: transparent; 
+                padding: 0 20px 0 16px;
+                color: $body-color;      
+                font-size: 16px;
+                font-weight: 600; 
+                height: 48px;        
+            }
+            .icon {
+                background: transparent;
+                color: $body-color;
+                width: auto;
+                left: 16px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        .th-btn {
+            padding: 17px 25px;
+        }
+    }
+    @include md {
+        display: block;
+        .campaign-thumb {
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    @include vxs {
+        .esculion-form-v1 {
+            .title {
+                font-size: 24px;
+            }
+        }
+    }
+}

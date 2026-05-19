@@ -1,0 +1,967 @@
+/* Why Choose Us Area ---------------------------------- */
+.why-img-box1 {
+    position: relative;
+    margin: -120px 0 0 -300px;
+    height: -webkit-fill-available;
+    .img1 {
+        height: 100%;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .play-btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    @include xxl {
+        margin: 0;
+        border-radius: 30px 30px 0 0;
+        overflow: hidden;
+    }
+    @include lg {
+        border-radius: 30px;
+    }
+    @include xs {
+        border-radius: 16px;
+    }
+}
+.why-img-box1.why-youtube-only {
+    margin: 0;
+    @include xxl {
+        border-radius: 30px;
+    }
+}
+.why-youtube-only {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 30px;
+    background: var(--smoke-color2);
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.28);
+        z-index: 1;
+        pointer-events: none;
+    }
+    .img1 {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        line-height: 0;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: center center;
+        }
+    }
+    .play-btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    @include lg {
+        min-height: 280px;
+        .img1 {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+    }
+    @include md {
+        min-height: 260px;
+        .img1 img {
+            object-position: center 35%;
+        }
+    }
+    @include xs {
+        min-height: 220px;
+        border-radius: 16px;
+        .img1 img {
+            object-position: center 30%;
+        }
+    }
+}
+.why-wrap1 {
+    margin-left: 96px;
+    @include ml {
+        margin-left: 36px;
+    }
+    @include lg {
+        margin-top: 60px;
+        margin-left: 0;
+    }
+}
+.why-card-wrap1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    .why-card {
+        flex: 1 1 calc(50% - 12px);
+        min-width: 200px;
+    }
+    @include xs {
+        flex-wrap: wrap;
+    }
+}
+.why-card {
+    background: $theme-color2;
+    text-align: center;
+    padding: 28px;
+    border-radius: 16px 16px 0 0;
+    .box-icon {
+        background: $title-color;
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 27px;
+        margin-bottom: 24px;
+    }
+    .box-title {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 0;
+        @include vxs {
+            font-size: 18px;
+        }
+    }
+    .box-text {
+        color: $title-color;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 2px;
+    }
+    &:nth-child(odd) {
+        background: $theme-color;
+        .box-icon {
+            background: $white-color;
+        }
+        .box-title {
+            color: $white-color;
+        }
+        .box-text {
+            color: $white-color;
+        }
+    }
+    @include xs {
+        width: 100%;
+    }
+}
+/* Why Choose Us Area 2---------------------------------- */
+.why-bg-shape2-1 {
+    @include sm {
+        display: none;
+    }
+}
+.why-img-box2 {
+    margin-left: -240px;
+    @include xxl {
+        margin-left: 0;
+    }
+}
+.why-wrap2 {
+    margin-left: 36px;
+    @include lg {
+        margin-left: 0;
+    }
+}
+
+/* Why Choose Us Area 3---------------------------------- */
+.why-img-box3 {
+    margin-right: 35px;
+    position: relative;
+    .img1 {
+        border-radius: 24px;
+        overflow: hidden;
+        .thumb {
+            display: block;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .about-tag {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        width: 192px;
+        height: 192px;
+        &:before {
+            inset: 17px;
+        }
+        .about-experience-tag {
+            width: 132px;
+            height: 132px;
+            margin-left: -66px;
+            margin-top: -66px;
+            font-size: 12px;
+            font-family: $title-font;
+            span {
+                --rotate-letter: 7.8deg;
+                height: 70px;
+                position: absolute;
+                width: 20px;
+                left: 36%;
+                top: -3px;
+            }
+        }
+        .year-counter {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            text-align: center;
+            width: 86px;
+            height: 86px;
+            .box-title {
+                background: $theme-color;
+                width: 86px;
+                height: 86px;
+                border-radius: 50%;
+                font-size: 40px;
+                font-weight: 800;
+                font-family: $title-font;
+                color: $white-color;
+                letter-spacing: -0.02em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+        }
+    }
+    @include lg {
+        margin-right: 0;
+        .about-tag {
+            top: auto;
+            bottom: 0;
+            right: 50%;
+            transform: translate(50%, 40%);
+        }
+    }
+}
+.why-wrap3 {
+    background: $smoke-color2;
+    border-radius: 24px;
+    padding: 60px 36px 60px 60px;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 14px;
+        li {
+            background: $white-color;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 0;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: $title-font;
+            color: $title-color;
+            padding: 17.5px 16px 17.5px 45px;
+            box-shadow: 0px 10px 50px rgba(0, 70, 59, 0.1);
+            &:before {
+                background: $theme-color;
+                left: 16px;
+                top: 19px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+            @include vxs {
+                font-size: 14px;
+            }
+        }
+    }
+    @include xs {
+        padding: 60px 30px;
+    }
+}
+/* Why Choose Us Area 4---------------------------------- */
+.why-bg-shape4-1,
+.why-bg-shape4-2 {
+    @include xxl {
+        display: none;
+    }
+}
+.why-img-box4 {
+    position: relative;
+    border-radius: 60px;
+    overflow: hidden;
+    display: inline-block;
+    .about-tag {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 158px;
+        height: 158px;
+        .about-experience-tag {
+            height: 132px;
+            width: 132px;
+            margin-left: -66px;
+            margin-top: -66px;
+            font-family: $title-font;
+            span {
+                --rotate-letter: 8.5deg;
+                height: 71px;
+                left: 37%;
+            }
+        }
+        .play-btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            --icon-size: 86px;
+            &:before,
+            &:after {
+                display: none;
+            }
+            > i {
+                background: $theme-color;
+                color: $white-color;
+            }
+        }
+    }
+    @include md {
+        border-radius: 30px;
+    }
+    @include xs {
+        border-radius: 24px;
+    }
+}
+.why-wrap4 {
+    margin-left: -12px;
+    @include ml {
+        margin-left: 0;
+    }
+}
+.why-card4 {
+    background-color: $white-color;
+    box-shadow: 0px 10px 50px rgba(0, 30, 66, 0.08);
+    border-radius: 24px;
+    padding: 34px 24px;
+    text-align: center;
+    .box-icon {
+        margin-bottom: 34px;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+        @include xl {
+            font-size: 22px;
+        }
+    }
+    .box-text {
+        letter-spacing: -0.02em;
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+}
+
+/* Why Choose Us Area 5---------------------------------- */
+.why-card-wrap5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding-bottom: 60px;
+    @include xs {
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 0;
+    }
+}
+.why-card5 {
+    background: $white-color;
+    border-radius: 16px;
+    box-shadow: 0px 10px 50px rgba(0, 30, 66, 0.08);
+    padding: 30px;
+    text-align: center;
+    &:nth-child(even) {
+        transform: translateY(60px);
+        @include xs {
+            transform: none;
+        }
+    }
+    .box-icon {
+        margin-bottom: 24px;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+    }
+    .box-text {
+        letter-spacing: -0.02em;
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+    @include xl {
+        padding: 30px 20px;
+    }
+    @include lg {
+        padding: 30px;
+        .box-text {
+            max-width: 253px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @include sm {
+        padding: 30px 20px;
+        .box-title {
+            font-size: 20px;
+        }
+        .box-text {
+            font-size: 14px;
+        }
+    }
+}
+.why-wrap5 {
+    margin-left: 56px;
+    @include lg {
+        margin-left: 0;
+    }
+}
+/* Why Choose Us Area 6---------------------------------- */
+.why-bg-shape6-1 {
+    @include xxl {
+        display: none;
+    }
+}
+.why-img-box6 {
+    position: relative;
+    padding-right: 86px;
+    .why-img-bg-shape6-1 {
+        position: absolute;
+        left: -85px;
+        bottom: 212px;
+        z-index: 1;
+        @include xxl {
+            left: -40px;
+        }
+        @include lg {
+            left: auto;
+            right: 0;
+        }
+    }
+    .img1 {
+        width: 100%;
+        border-radius: 24px;
+        overflow: hidden;
+        .thumb {
+            width: 100%;
+        }
+    }
+}
+.why-wrap6 {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 296px;
+        height: 296px;
+        right: -170px;
+        bottom: 120px;
+        background: #FFBF00;
+        opacity: 0.4;
+        filter: blur(200px);
+        z-index: -1;
+    }
+}
+.why-card-wrap6 {
+    margin-left: -86px;
+    @include lg {
+        margin-left: 0;
+    }
+}
+.why-card6 {
+    background: $smoke-color;
+    border-radius: 24px;
+    padding: 32px;
+    .title-wrap {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        .box-title {
+            margin-bottom: -0.32em;
+        }
+    }
+    .box-text {
+        margin-bottom: 9px;
+    }
+}
+/* Why Choose Us Area 8---------------------------------- */
+.why-bg-shape8-2 {
+    @include xxl {
+        display: none;
+    }
+}
+.why-bg-shape8-1 {
+    @include lg {
+        display: none;
+    }
+}
+.why-wrap8 {
+    .why-info-wrap8 {
+        background: $white-color;
+        border-radius: 40px;
+        padding: 30px 160px 30px 30px;
+        display: flex;
+        margin-right: -492px;
+        gap: 30px;
+        margin-top: 60px;
+        @include xl {
+            padding: 30px 117px 30px 30px;
+        }
+        @include lg {
+            margin-right: 0;
+            padding: 30px;
+        }
+        @include md {
+            display: inline-block;
+            margin-top: 40px;
+        }
+        @include xs {
+            border-radius: 30px;
+        }
+        .why-info-card {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            .box-icon {
+                height: 100px;
+                width: 100px;
+                background: $light-color3;
+                border-radius: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: none;
+            }
+            .box-title {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+            @include md {
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+                .box-text {
+                    max-width: 320px;
+                }
+            }
+            @include xs {
+                flex-wrap: wrap;
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+.why-img-box8 {
+    display: flex;
+    justify-content: end;
+    @include lg {
+        justify-content: start;
+    }
+    @include xs {
+        display: block;
+        text-align: center;
+    }
+    .img1 {
+        .thumb {
+            border-radius: 0px 0px 144.97px 144.97px;
+            overflow: hidden;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                inset: 74px 0 0 0;
+                background: $theme-color2;
+                border-radius: 150px;
+                z-index: -1;
+            }
+        }
+    }
+    .img2 {
+        margin-top: 174px;
+        margin-left: -21px;
+        z-index: 1;
+        .thumb {
+            border-radius: 0px 0px 171.76px 171.76px;
+            overflow: hidden;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                inset: 100px 57px 0 57px;
+                background: $theme-color;
+                border-radius: 150px;
+                z-index: -1;
+            }
+        }
+        @include xs {
+            margin-top: 20px;
+            margin-left: 0;
+        }
+    }
+}
+
+/* Why Choose Us Area 9---------------------------------- */
+.work-process-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 30px;
+        width: 6px;
+        height: calc(100% - 100% / 3 + 34px);
+        background: $smoke-color4;
+        transform: translate(-50%, 0);
+        z-index: -1;
+        @include vxs {
+            left: 24px;
+        }
+    }   
+    .work-process-single-list {
+        &.dot-active {
+            .single-work-process {
+                &:before {
+                    transform: scaleY(1);
+                }
+                .box-number {
+                    border-color: $theme-color;
+                }
+            }
+        }
+        &:last-child {
+            .single-work-process {
+                padding-bottom: 0px;
+                &:before {
+                    display: none;
+                }
+                @include md {
+                    padding-bottom: 0;
+                }
+            }
+        }    
+    }
+}
+.single-work-process {
+    display: flex;
+    gap: 36px;
+    padding: 0 0 34px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 28px;
+        width: 6px;
+        height: 100%;
+        z-index: 1;
+        background: linear-gradient(180deg, $theme-color 50%, #F5F5F5);
+        transition: 0.4s all ease;
+        transform: scaleY(0);
+        transform-origin: top;
+        @include vxs {
+            left: 22px;
+        }
+    }
+    .box-number {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        flex: none;
+        border: 8px solid $smoke-color4;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: $theme-color;
+        position: relative;
+        background: $white-color;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: $title-font;
+        color: $title-color;
+        z-index: 1;
+        transition: 0.4s;
+        @include vxs {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+    }
+    .box-content {
+        padding-top: 10px;
+        @include vxs {
+            padding-top: 15px;
+        }
+    }
+    .box-title {
+        font-size: 24px;
+        font-weight: 700;
+        @include vxs {
+            font-size: 20px;
+        }
+    }
+    .box-text {
+        line-height: 1.625em;
+    }
+    &:hover {
+        &:before {
+            transform: scaleY(1);
+        }
+        .box-number {
+            border-color: $theme-color;
+        }
+    }
+    @include md {
+        max-width: none; 
+    }
+    @include xs {
+        gap: 24px;
+    }
+}
+/* Why Choose Us Area 10---------------------------------- */
+.why-img-box10 {
+    text-align: end;
+    position: relative;
+    z-index: 1;
+    .img1 {
+        display: inline-block;
+        position: relative;
+        .why-img-shape {
+            position: absolute;
+            inset: 0 -40px 0 40px;
+            background: $theme-color;
+            .why-img-shape-line {
+                position: absolute;
+                inset: 1px;
+                background: $white-color;
+            }
+        }
+        @include ml {
+            margin-right: 40px;
+            margin-left: 110px;
+        }
+        @include sm {
+            margin-left: 0;
+        }
+    }
+    .thumb {
+        display: inline-block;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 77.98%, rgba(255, 255, 255, 0.671642) 89.58%, #FFFFFF 100%);
+        }
+    }
+    .why-info-card11-1,
+    .why-info-card11-2 {
+        position: absolute;
+        border-radius: 16px;
+        box-shadow: 0px 10px 50px rgba(0, 30, 66, 0.08);
+        overflow: hidden;
+    }
+    .why-info-card11-1 {
+        left: -111px;
+        bottom: 210px;
+        @include sm {
+            left: 0;
+        }
+    }
+    .why-info-card11-2 {
+        right: 12px;
+        bottom: -30px;
+        @include xl {
+            max-width: 300px;
+        }
+        @include sm {
+            bottom: 0;
+        }
+    }
+    @include lg {
+        text-align: start;
+        margin-bottom: 60px;
+    }
+}
+.why-wrap10 {
+    display: grid;
+    grid-template-columns: 376px 277px;
+    grid-template-rows: auto auto;
+    gap: 24px;
+    margin-top: -100px;
+    .why-card10 {
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden;
+        padding: 34px;
+        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 151px;
+            height: 151px;
+            border-radius: 50%;
+            left: 30px;
+            z-index: -1;
+        }
+        .why-card-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            @include lg {
+                display: none;
+            }
+        }
+        .box-icon {
+            box-shadow: 0px 20px 70px rgba(66, 14, 0, 0.38);
+            border-radius: 50%;
+            background: $white-color;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 34px;
+            img {
+                transition: 0.4s;
+            }
+        }
+        .box-title {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+        .box-text {
+            max-width: 209px;
+            letter-spacing: -0.02em;
+        }
+        &:nth-child(1) {
+            background: $light-color3;
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            &:after {
+                width: 211px;
+                height: 211px;
+                background: #FFBF00;
+                filter: blur(150px);
+                left: 30px;
+                top: 12px;
+            }
+            .box-icon {
+                margin-bottom: 64px;
+                @include lg {
+                    margin-bottom: 34px;
+                }
+            }
+        }
+        &:nth-child(2) {
+            background: $smoke-color3;
+            grid-column: 2 / 3;
+            &:after {                
+                background: #743EF9;
+                top: -18px;
+                opacity: 0.8;
+                filter: blur(95px);
+            }
+        }
+        &:nth-child(3) {
+            background: #FFEBEB;
+            grid-column: 2 / 3;
+            &:after {
+                background: #FE5A86;
+                filter: blur(95px);
+                top: -18px;
+            }
+        }
+        &:nth-child(4) {
+            background: $light-color;
+            grid-column: 3 / 5; 
+            &:after {
+                background: #1882FF;
+                filter: blur(95px);
+                top: -18px;
+            }
+        }
+        &:hover {
+            .box-icon {
+                img {
+                    transform: scale(-1) rotate(180deg);
+                }
+            }
+        }
+    }
+    @include ml {
+        margin-top: -50px;
+    }
+    @include xl {
+        margin-top: 0;
+    }
+    @include lg {
+        margin-top: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        .why-card10 {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                grid-column: inherit;
+                grid-row: inherit;
+            }
+        }
+    }
+    @include xs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

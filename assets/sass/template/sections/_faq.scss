@@ -1,0 +1,336 @@
+/* Faq 1 ---------------------------------- */ 
+.faq-bg-shape1-2,
+.faq-bg-shape1-1 {
+    @include xxl {
+        display: none;
+    }
+}
+.faq-img-box1 {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    .img1 {
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 24px;
+        align-self: self-start;
+        img {
+            width: 100%;
+        }
+    }
+    .img2 {
+        display: inline-block;
+        border-radius: 24px;
+        overflow: hidden;
+    }
+    .faq-counter-wrap {
+        position: absolute;
+        background: $white-color;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        bottom: 20px;
+        left: 0;
+        gap: 16px;
+        box-shadow: 0px 10px 50px rgba(0, 70, 59, 0.1);
+        .box-title {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: $title-font;
+            color: $theme-color;
+            margin-bottom: 0;
+        }
+        .box-text {
+            font-size: 14px;
+        }
+    }
+    @include vxs {
+        display: block;
+        .img1 {
+            display: block;
+            margin-bottom: 24px;
+            .thumb {
+                display: block;
+            }
+        }
+        .faq-counter-wrap {
+            position: relative;
+            animation: none !important;
+            bottom: auto;
+            margin-top: 24px;
+        }
+    }
+}
+.accordion-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: $white-color;
+    text-align: left;
+    position: relative;
+    z-index: 3;
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+    .accordion-button {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $title-font;
+        border: 0;
+        color: $title-color;
+        background-color: transparent;
+        box-shadow: 0px 10px 50px rgba(0, 70, 59, 0.1);
+        border-radius: 0;
+        padding: 17px 55px 17px 24px;
+        min-height: 56px;
+        gap: 10px;
+        margin-bottom: 0;
+        text-align: left;
+        transition: 0.3s;
+        position: relative;
+        letter-spacing: -0.02em;
+        &:after {
+            content: "\f107";
+            height: 100%;
+            width: auto;
+            line-height: 1;
+            background-color: transparent;
+            background-image: none;
+            font-family: $icon-font;
+            color: $title-color;
+            font-weight: 500;
+            font-size: 1em;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 30px;
+            transition: 0.3s ease-in-out;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        &:not(.collapsed) {
+            box-shadow: none;
+            border-radius: 0;
+            &:after {
+                transform: rotateX(180deg);
+            }
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+    .accordion-collapse {
+        border: none;
+    }
+    .accordion-body {
+        border: none;
+        padding: 0 0 24px;
+        margin: 0 24px;
+    }
+    .faq-text {
+        margin-bottom: -0.48em;
+    }
+}
+
+@include xs {
+    .accordion-card {
+        border-radius: 15px;
+        .accordion-button {
+            font-size: 16px;
+            padding: 19px 55px 19px 25px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        .faq-text {
+            font-size: 14px;
+        }
+    }
+}
+
+
+/* Faq 2 ---------------------------------- */ 
+.faq-bg-shape2-1 {
+    @include xxl {
+        display: none;
+    }
+}
+.faq-img-box2 {
+    position: relative;
+    margin: 0 0 0 -300px;
+    height: -webkit-fill-available;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    flex: 0 0 auto;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 100%;
+        background: $theme-color2;
+        right: 0;
+        top: 0;
+        clip-path: polygon(0 0, 100% 60px, 100% 100%, 0 calc(100% - 60px));
+    }
+    .img1 {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        .thumb {
+            transform: scale(1.15);
+            height: 100%;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    @include hd {
+        margin: 0;
+        flex: 50%;
+    }
+    @include xxl {
+        margin: 0 0 0 -150px;
+        flex: 50%;
+    }
+    @include xl {
+        margin: 0 0 0 -42px;
+    }
+    @include md {
+        margin: 0;
+        padding-right: 0;
+        padding-bottom: 40px;
+        padding-left: 40px;
+        &:after {
+            width: 100%;
+            height: 40px;
+            top: auto;
+            bottom: 0;
+            clip-path: polygon(40px 0%, 100% 0%, calc(100% - 40px) 100%, 0% 100%);
+        }
+    }
+    @include sm {
+        padding-left: 0;
+        padding-bottom: 0;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 40px;
+        &:after {
+            display: none;
+        }
+    }
+}
+.faq-wrap2 {
+    display: flex;
+    @include md {
+        display: block;
+    }
+    .faq-content-wrap {
+        margin: 60px -300px 0 0;
+        padding-right: 312px;
+        height: -webkit-fill-available;
+        padding-left: 80px;
+        @include hd {
+            margin-right: 0;
+            padding-right: 80px;
+            flex: 50%;
+        }
+        @include xxl {
+            margin: 60px -150px 0 0;
+            padding-right: 162px;
+            flex: 50%;
+        }
+        @include xl {
+            margin: 60px -42px 0 0;
+            padding-right: 80px;
+        }
+        @include lg {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @include md {
+            margin: 0;
+            margin-right: 40px;
+        }
+        @include sm {
+            margin-right: 0;
+            border-radius: 16px;
+        }
+        @include vxs {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+/* Faq 3 ---------------------------------- */ 
+.faq-bg-shape3-2,
+.faq-bg-shape3-1 {
+    @include xxl {
+        display: none;
+    }
+}
+.faq-img-box3 {
+    margin-left: -300px;
+    display: inline-block;
+    border-radius: 0 0 60px 0;
+    overflow: hidden;
+    @include hd {
+        border-radius: 0 0 60px 60px;
+    }
+    @include lg {
+        margin-left: 0;
+        border-radius: 0 0 60px 60px;
+    }
+}
+.faq-wrap3 {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 1761px;
+        height: 1269px;
+        border-radius: 50%;
+        right: -140%;
+        top: -30%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(28, 176, 152, 0.2) 0%, rgba(217, 217, 217, 0) 100%);
+        @include md {
+            display: none;
+        }
+    }
+}
+.accordion-card.style2 {
+    box-shadow: 0px 10px 20px rgba(0, 70, 59, 0.1);
+}
+/* Faq Page ---------------------------------- */ 
+.faq-tabs {
+    border: 0;
+    flex-wrap: wrap;
+    gap: 14px 30px;
+    .nav-item {
+        .nav-link {
+            padding: 21px 40px;
+            border-radius: 50px;
+            margin: 0;
+            border: 1px solid $theme-color;
+            color: $theme-color;
+            text-transform: uppercase;
+            &.active,
+            &:focus,
+            &:active,
+            &:hover {
+                background: $theme-color;
+                color: $white-color;
+                &:after {
+                    background: $white-color;
+                    animation: ani 0.7s steps(29) forwards;
+                }
+            }
+        }
+    }
+}

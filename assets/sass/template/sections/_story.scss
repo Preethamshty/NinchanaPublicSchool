@@ -1,0 +1,170 @@
+/* Story Area 1 ---------------------------------- */
+.story-img-box1 {
+    position: relative;
+    padding: 0 0 40px 156px;
+    text-align: end;
+    .img1 {
+        text-align: end;
+        img {
+            border-radius: 30px;
+        }
+    }
+    .story-shape1-1 {
+        position: absolute;
+        inset: -120px -82px 0px 93px;
+        z-index: -1;
+    }
+    .story-card {
+        max-width: 340px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: start;
+    }
+    .year-counter {
+        position: absolute;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        top: 0;
+        left: 30px;
+        border-radius: 0;
+        padding-top: 152px;
+        min-width: auto;
+        max-width: 90px;
+        &:after {
+            display: none;
+        }
+        .year-counter_number {
+            font-size: 74px;
+            font-weight: 800;
+            font-family: $title-font;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+        .year-counter_text {
+            font-size: 18px;
+            font-weight: 600;
+            color: $theme-color2;
+            font-family: $title-font;
+            transform: rotate(-90deg);
+            transform-origin: left top;
+            line-height: 1.7em;
+            margin-bottom: -52px;
+            margin-left: 12px;
+            span {
+                color: $body-color;
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+    }
+    @include xl {
+        padding: 0 0 90px 156px;
+        margin-left: 0;
+        .year-counter {
+            padding-top: 122px;
+            .year-counter_number {
+                font-size: 70px;
+            }
+            .year-counter_text span {
+                font-size: 24px;
+            }
+        }
+    }
+    @include lg {
+        display: inline-block;
+    }
+    @include sm {
+        padding: 0 0 170px 150px;
+    }
+    @include xs {
+        padding: 0 0 170px 80px;
+        .year-counter {
+            left: 0;
+            .year-counter_text {
+                margin-left: 0;
+            }
+            .year-counter_number {
+                font-size: 50px;
+            }
+        }
+        .story-shape1-1 {
+            inset: -70px 0px 0px 0px;
+        }
+    }
+    @include vxs {
+        padding: 0;
+        .story-card {
+            max-width: none;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            animation: none !important;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .year-counter {
+            position: relative;
+            padding-top: 20px;
+            max-width: none;
+            .year-counter_text {
+                transform: none;
+                margin-left: 70px;
+                max-width: 130px;
+            }
+        }
+    }
+}
+.story-card {
+    background: $white-color;
+    box-shadow: 0px 16px 32px -4px rgba(12, 12, 13, 0.1), 0px 4px 4px -4px rgba(12, 12, 13, 0.05);
+    border-radius: 30px;
+    padding: 40px;
+    .box-title {
+        font-weight: 700;
+    }
+    .quote-icon {
+        width: 31px;
+        height: 28px;
+        background: $theme-color2;
+        position: absolute;
+        right: 35px;
+        top: 30px;
+        z-index: 1;
+    }
+    @include xs {
+        padding: 30px;
+    }
+}
+
+/* Story Area 2 ---------------------------------- */
+.story-bg-shape2-1 {
+    @include xxl {
+        display: none;
+    }
+}
+.story-bg-shape2-2 {
+    img {
+        height: 100%;
+    }
+    @include xl {
+        display: none;
+    }
+}
+.story-img-box2 {
+    position: relative;
+    .img1 {
+        img {
+            width: 100%;
+        }
+    }
+    .story-img-shape2-1 {
+        position: absolute;
+        top: 72px;
+        right: 40px;
+    }
+    @include lg {
+        display: inline-block;
+    }
+}

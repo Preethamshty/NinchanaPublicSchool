@@ -1,0 +1,417 @@
+/* Service Card ---------------------------------- */
+.service-bg-shape1-2 {
+    .color-masking {
+        .masking-src {
+            background: $theme-color2;
+        }
+    }
+}
+.service-bg-shape1-3 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 185px;
+    height: 70%;
+    background: $theme-color2;
+    z-index: 1;
+    border-radius: 0 0 0 400px;
+}
+.service-bg-shape1-4 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 254px;
+    height: 30%;
+    background: $theme-color;
+    z-index: 1;
+    border-radius: 400px 0 0 0;
+}
+.service-card {
+    position: relative;
+    padding: 0;
+    text-align: center;
+    .box-thumb {
+        background: $white-color;
+        border-radius: 30px;
+        padding: 20px 20px 0;
+        margin-bottom: -80px;
+        img {
+            border-radius: 16px;
+            transition: 0.4s;
+            width: 100%;
+        }
+    }
+    .box-icon {
+        background-color: $white-color;
+        display: inline-block;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        width: 160px;
+        height: 80px;
+        line-height: 100px;
+        text-align: center;
+        transition: 0.4s;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 10px solid $theme-color2;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            border-bottom: 0;
+            transition: 0.4s;
+            opacity: 0.3;
+        }
+        img {
+            transform: translate(0, 10px);
+            transition: 0.4s;
+        }
+    }
+    .box-content {
+        background-color: $white-color;
+        padding: 40px;
+        border-radius: 30px;
+        box-shadow: 0px 4px 4px -1px rgba(12, 12, 13, 0.1), 0px 4px 4px -1px rgba(12, 12, 13, 0.05);
+    }
+    .box-title {
+        margin-bottom: 14px;
+        a {
+            font-size: 24px;
+            font-weight: 700;
+            color: $title-color;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .box-text {
+        margin-bottom: 23px;
+    }
+    .th-btn {
+        padding: 16px 40px;
+        background: $theme-color2;
+    }
+    &:hover {
+        .box-thumb {
+            img {
+                filter: grayscale(9);
+            }
+        }
+        .box-icon {
+            img {
+                transform: translate(0, 10px) rotateY(180deg);
+            }
+            &:after {
+                border-color: $theme-color;
+            }
+        }
+        .th-btn {
+            background: $theme-color;
+        }
+    }
+    &.style2 {
+        .box-icon:after {
+            opacity: 1;
+        }
+    }
+}
+
+/* Service Card 1.1---------------------------------- */
+.service-wrap1 {
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+/* Service Card 2---------------------------------- */
+.service-bg-shape2-2 {
+    margin-left: -315px;
+    position: relative;
+    .service-bg-shape2-3 {
+        right: 50px;
+        top: 20px;
+        position: absolute;
+        transform: translate(50%, -100%);
+        width: 230px;
+        @include ml {
+            right: 30px;
+            top: 10px;
+            width: 200px;
+        }
+        @include xl {
+            width: 110px;
+        }
+    }
+    @include lg {
+        display: none;
+    }
+}
+.service-wrap2 {
+    .sec-text {
+        max-width: 548px;
+        font-size: 16px;
+        @include lg {
+            max-width: none;
+        }
+    }
+}
+.service-card2 {
+    padding: 40px;
+    border-radius: 30px;
+    background: $white-color;
+    box-shadow: 0px 4px 4px -1px rgba(12, 12, 13, 0.1), 0px 4px 4px -1px rgba(12, 12, 13, 0.05);
+    position: relative;
+    display: flex;
+    gap: 20px;
+    .service-card-icon {
+        transition: 0.4s;
+        flex: none;
+        
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        margin-top: -0.3em;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .box-text {
+        margin-bottom: -0.5em;
+        color: $light-color;
+    }
+    .icon-btn {
+        right: 20px;
+        top: 20px;
+        position: absolute;
+        --btn-size: 46px;
+        --btn-font-size: 16px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        i {
+            transition: 0.4s;
+        }
+        &:hover {
+            i.fa-arrow-up-right {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    &:hover {
+        .service-card-icon {
+            img {
+                transform: rotateY(180deg);
+            }
+            &:after {
+                border-color: $theme-color2;
+            }
+        }
+    }
+    @include xs {
+        padding: 30px;
+        .box-text {
+            margin-bottom: 15px;
+        }
+        .icon-btn {
+            position: initial;
+        }
+    }
+    @include vxs {
+        display: block;
+        .service-card-icon {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* Service Card 3---------------------------------- */
+.service-card.style3 {
+    .box-thumb {
+        border-radius: 30px;
+        overflow: hidden;
+        padding: 0;
+        transition: 0.4s;
+        margin-bottom: -160px;
+        filter: grayscale(1);
+        img {
+            filter: none;
+        }
+    }
+    .box-content {
+        position: relative;
+    }
+    .box-icon {
+        width: 140px;
+        height: 68px;
+        img {
+            transform: translate(0, 0px);
+            position: relative;
+            z-index: 1;
+        }
+        &:after {
+            width: 160px;
+            height: 80px;
+            inset: -10px;
+        }
+    }
+    .box-text {
+        margin-bottom: -0.4em;
+    }
+    .box-title {
+        margin-bottom: 8px;
+    }
+    &:hover {
+        .box-thumb {
+            filter: none;
+        }
+        .box-icon {
+            img {
+                transform: translate(0, 0px) rotate(180deg) scale(-1);
+            }
+        }
+    }
+    @include lg {
+        .box-thumb {
+            margin-bottom: -120px;
+        }
+        .box-title a {
+            font-size: 20px;
+        }
+        .box-content {
+            padding: 40px 30px 30px;
+        }
+    }
+}
+
+/* Service Card 4---------------------------------- */
+.service-bg-shape4-2,
+.service-bg-shape4-1 {
+    @include lg {
+        display: none;
+    }
+}
+.service-card-wrap4 {
+    &.item-active {
+        .service-card4 {
+            transform: rotate(30deg);
+            box-shadow: 0px 4px 60px #06241F;         
+            @include md {
+                transform: none;
+            }   
+        }
+    }
+}
+.service-card4 {
+    border: 1px solid #274B45;
+    border-radius: 1000px;
+    transition: 0.4s;
+    text-align: center;
+    padding: 65px 30px;
+    .box-title {
+        margin-bottom: -0.3em;
+        color: $white-color;
+        a {
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+    @include lg {
+        padding: 40px 20px;
+        .box-title {
+            font-size: 20px;
+        }
+    }
+    @include vxs {
+        .box-title {
+            font-size: 18px;
+        }
+    }
+}
+/* Service Card 5---------------------------------- */
+.service-card.style5 {
+    .box-thumb {
+        border-radius: 30px;
+        overflow: hidden;
+        padding: 0;
+        transition: 0.4s;
+        margin-bottom: -160px;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-content {
+        position: relative;
+        padding: 40px 30px;
+        @include xl {
+            padding: 40px 20px;
+        }
+    }
+    .box-icon {
+        width: 140px;
+        height: 68px;
+        img {
+            transform: translate(0, 0px);
+            position: relative;
+            z-index: 1;
+        }
+        &:after {
+            width: 160px;
+            height: 80px;
+            inset: -10px;
+        }
+    }
+    .box-text {
+        margin-bottom: -0.4em;
+    }
+    .box-title {
+        margin-bottom: 8px;
+    }
+    &:hover {
+        .box-thumb {
+            img {
+                filter: none;
+                transform: scale(1.05);
+            }
+        }
+        .box-icon {
+            img {
+                transform: translate(0, 0px) rotate(180deg) scale(-1);
+            }
+        }
+    }
+    @include xl {
+        .box-title a {
+            font-size: 20px;
+        }
+    }
+    @include lg {
+        .box-thumb {
+            margin-bottom: -120px;
+        }
+        .box-title a {
+            font-size: 18px;
+        }
+        .box-text {
+            font-size: 14px;
+        }
+        .box-content {
+            padding: 40px 20px 30px;
+        }
+    }
+    @include sm {
+        .box-title a {
+            font-size: 20px;
+        }
+    }
+    @include xs {
+        .box-thumb {
+            border-radius: 16px;
+        }
+        .box-content {
+            border-radius: 16px;
+        }
+    }
+}

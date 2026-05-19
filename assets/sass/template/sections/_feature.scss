@@ -1,0 +1,407 @@
+
+/* Feature card ---------------------------------- */
+.feature-card {
+    background: $white-color;
+    border: 1px solid $border-color;
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    transition: 0.4s;
+    .box-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: $theme-color;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+        transition: 0.4s;
+        img {
+            filter: brightness(99);
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        transition: 0.4s;
+    }
+    .box-text {
+        letter-spacing: -0.02em;
+        transition: 0.4s;
+    }
+    &:hover {
+        background: $theme-color;
+        .box-icon {
+            background: $white-color;
+            img {
+                transform: rotate(180deg) scale(-1);
+                filter: none;
+            }
+        }
+        .box-title {
+            color: $white-color;
+        }
+        .box-text {
+            color: $white-color;
+        }
+    }
+    @include xl {
+        padding: 30px;
+        .box-icon {
+            margin-bottom: 30px;
+        }
+    }
+    @include lg {
+        .box-title {
+            font-size: 20px;
+        }
+    }
+}
+
+/* Feature card 2---------------------------------- */
+.feature-card-wrap2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+    @include lg {
+        display: block;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+.feature-single-card {
+    width: 25%;
+    padding-right: 12px;
+    padding-left: 12px;
+    transition: 0.4s;
+    &.hover-item.item-active {
+        width: 50%;
+        .box-text {
+            opacity: 0;
+        }
+        .feature-card-active-wrap {
+            opacity: 1;
+            visibility: visible;
+            bottom: 0;
+            .box-text {
+                opacity: 1;
+            }
+        }
+        @include lg {
+            width: 100%;
+        }
+    }
+    @include lg {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}
+.feature-card2 {
+    border-radius: 24px;
+    background: $light-color;
+    padding: 34px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    @include lg {
+        padding: 0;
+    }
+    .box-bg-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: max-content;
+        z-index: -1;
+    }
+    .box-icon {
+        margin-bottom: 34px;
+        @include lg {
+            display: none;
+        }
+    }
+    .box-title {
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        margin-bottom: 19px;
+        @include lg {
+            display: none;
+        }
+    }
+    .box-text {
+        transition: 0.4s;
+        max-width: 244px;
+        @include ml {
+            max-width: 226px;
+        }
+        @include xl {
+            max-width: 193px;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+    .th-btn {
+        margin-top: 120px;
+        @include lg {
+            display: none;
+        }
+    }
+    .feature-card-active-wrap {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        visibility: hidden;
+        bottom: -30px;
+        z-index: 2;
+        transition: 0.4s;
+        @include lg {
+            opacity: 1;
+            visibility: visible;
+            bottom: 0;
+            position: relative;
+            padding: 400px 34px 34px;
+        }
+        @include md {
+            padding: 300px 34px 34px;
+        }
+        @include sm {
+            padding: 200px 34px 34px;
+        }
+        @include xs {
+            padding: 200px 20px 20px;
+        }
+        .feature-card-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            &:after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, rgba(0, 17, 43, 0) 37.01%, #00112B 100%);
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .feature-card_details {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: 34px;
+            border-radius: 46px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(21px);
+            padding: 34px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: space-between;
+            @include lg {
+                position: relative;
+                margin: 0;
+            }
+            @include xs {
+                border-radius: 24px;
+            }
+            .box-title-wrap {
+                display: flex;
+                align-items: center;
+                gap: 20px 14px;
+                margin-bottom: 14px;
+                flex-wrap: wrap;
+            }
+            .box-icon {
+                margin-bottom: 0;
+                @include lg {
+                    display: block;
+                }
+            }
+            .box-title {
+                margin-bottom: -0.3em;
+                a {
+                    color: $white-color;
+                    &:hover {
+                        color: $theme-color2;
+                    }
+                }
+                @include lg {
+                    display: block;
+                }
+            }
+            .box-text {
+                color: $white-color;
+                letter-spacing: -0.02em;
+                width: 328px;
+                max-width: none;
+                @include xl {
+                    width: 290px;
+                }
+                @include lg {
+                    display: block;
+                }
+                @include sm {
+                    width: auto;
+                }
+            }
+            .icon-btn {
+                flex: none;
+                width: 76px;
+                border-radius: 36px;
+            }
+            @include sm {
+                display: block;
+                .icon-btn {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+/* Feature card 3---------------------------------- */
+.feature-card.style3 {
+    border: 0;
+    padding: 50px 40px;
+    .box-img {
+        margin-bottom: 50px;
+    }
+    .box-title {
+        color: $title-color;
+    }
+    .box-text {
+        color: $body-color;
+    }
+    @include ml {
+        padding: 50px 30px;
+    }
+    @include lg {
+        padding: 50px 40px;
+    }
+    @include md {
+        padding: 40px 30px;
+    }
+    @include xs {
+        padding: 40px 30px;
+        .box-img {
+            margin-bottom: 30px;
+        }
+    }
+}
+/* Feature card 4---------------------------------- */
+.feature-wrap4 {
+    background: $white-color;
+    border-radius: 100px;
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+    @include md {
+        border-radius: 60px;
+    }
+}
+.feature-card4 {
+    border-radius: 60px;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    text-align: center;
+    padding: 40px 30px;
+    &:after {
+        content: '';
+        position: absolute;
+        height: 70px;
+        width: 140px;
+        background: $theme-color;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border-radius: 0 0 50% 50%/ 0 0 100% 100%;
+        z-index: -1;
+        opacity: 0.2;
+    }
+    .box-icon {
+        margin-bottom: 32px;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        margin-bottom: 11px;
+        @include xl {
+            font-size: 20px;
+        }
+        @include lg {
+            font-size: 24px;
+        }
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+    @include md {
+        border-radius: 40px;
+    }
+}
+/* Feature card 5---------------------------------- */
+.feature-card5 {
+    border-radius: 24px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 45px;
+    background: $smoke-color4;
+    .box-icon {
+        margin-bottom: 44px;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        margin-bottom: 10px;
+        font-weight: 700;
+        @include xl {
+            font-size: 20px;
+        }
+        @include lg {
+            font-size: 24px;
+        }
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+    @include ml {
+        padding: 40px 30px;
+    }
+    @include lg {
+        padding: 45px;
+    }
+    @include md {
+        padding: 40px 30px;
+    }
+    @include xs {
+        .box-icon {
+            margin-bottom: 30px;
+        }
+    }
+}

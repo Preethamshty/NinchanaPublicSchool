@@ -1,0 +1,552 @@
+/* Process Card ---------------------------------- */
+.process-bg-shape1-1, 
+.process-bg-shape1-2 {
+    @include xxl {
+        display: none;
+    }
+}
+.process-card-wrap1 {
+    display: flex;
+    justify-content: center;
+    margin-left: 48px;
+    flex-wrap: wrap;
+    @include ml {
+        margin-left: 0;
+        gap: 24px;
+    }
+}
+.process-card {
+    text-align: center;
+    padding: 32px;
+    align-self: self-start;
+    position: relative;
+    width: 100%;
+    max-width: 364px;
+    margin-left: -48px;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 75px;
+        mask-image: url(../img/shape/process-arrow1-shape.png);
+        mask-size: 100% 100%;
+        background: $theme-color;
+        @include ml {
+            display: none;
+        }
+    }
+    &:before {
+        transform: rotateX(180deg);
+        rotate: 60deg;
+        top: 50px;
+        right: -108px;
+    }
+    &:after {
+        bottom: -110px;
+        right: 10px;
+        rotate: 8deg;
+    }
+    @include ml {
+        margin-left: 0;
+    }
+    &:nth-child(even) {
+        margin-top: 162px;
+        &:before {
+            top: -110px;
+            right: 10px;
+            rotate: -7deg;
+        }
+        &:after {
+            rotate: -55deg;
+            bottom: 55px;
+            right: -120px;
+        }
+        @include ml {
+            margin-top: 0;
+        }
+    }
+    &:last-child {
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+    .process-card-bg {
+        position: absolute;
+        inset: 0;
+        background: $theme-color;
+        z-index: -1;
+        @include vxs {
+            mask-image: none !important;
+            border-radius: 16px;
+        }
+    }
+    .box-img {
+        display: inline-block;
+        margin-bottom: 32px;
+    }
+    .box-content {
+        max-width: 211px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        @include xxl {
+            font-size: 20px;
+        }
+    }
+    .box-text {
+        line-height: 1.625em;
+        letter-spacing: -0.02em;
+    }    
+}
+
+/* Process Area 2 ---------------------------------- */
+.process-bg-shape2-1 {
+    @include xxl {
+        display: none;
+    }
+}
+.process-bg-shape2-2 {
+    @include ml {
+        display: none;
+    }
+}
+.process-img-box2 {
+    position: relative;
+    margin-left: -33px;
+    margin-top: -120px;
+    bottom: -120px;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 548px;
+        height: 548px;
+        background: $white-color;
+        border-radius: 50%;
+        z-index: -1;
+        top: 0;
+        left: 33px;
+        @include xl {
+            width: 450px;
+            height: 450px;
+        }
+        @include lg {
+            width: 550px;
+            height: 550px;
+        }
+        @include sm {
+            width: 450px;
+            height: 450px;
+        }
+        @include xs {
+            width: auto;
+            height: auto;
+            inset: 0 30px 30px;
+        }
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: 430px;
+        height: 430px;
+        border-radius: 50%;
+        background: #1CB098;
+        opacity: 0.5;
+        filter: blur(125px);
+        z-index: -2;
+        top: 58px;
+        left: 92px;
+        @include xl {
+            width: 350px;
+            height: 350px;
+        }
+        @include lg {
+            width: 440px;
+            height: 440px;
+            top: 110px;
+        }
+        @include sm {
+            width: 300px;
+            height: 300px;
+        }
+        @include xs {
+            width: auto;
+            height: auto;
+            inset: 60px 60px 30px;
+        }
+    }
+    @include xxl {
+        margin-left: 0;
+    }
+}
+.process-wrap2 {
+    padding-left: 36px;
+    @include xl {
+        padding-left: 0;
+    }
+}
+.process-card-wrap2 {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+.process-card2 {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    @include vxs {
+        display: block;
+    }
+    .box-number {
+        font-size: 84px;
+        font-weight: 800;
+        font-family: $title-font;
+        letter-spacing: -0.02em;
+        color: $title-color;
+        opacity: 0.08;
+        line-height: 0.8;
+        @include xl {
+            font-size: 74px;
+        }
+        @include lg {
+            font-size: 60px;
+        }
+        @include vxs {
+            margin-bottom: 20px;
+        }
+    }
+    .process-card-content {
+        border-radius: 20px;
+        background: $white-color;
+        box-shadow: 10px 25px 100px rgba(30, 30, 30, 0.15);
+        display: flex;
+        padding: 24px 45px 24px 24px;
+        gap: 16px;
+        align-items: center;
+        width: -webkit-fill-available;
+        @include xl {
+            padding: 24px;
+        }
+        @include xs {
+            display: block;
+        }
+    }
+    .box-icon {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $smoke-color2;
+        border-radius: 50%;
+        flex: none;
+        @include xs {
+            margin-bottom: 20px;
+        }
+    }
+    .box-title {
+        letter-spacing: -0.02em;
+        margin-bottom: 2px;
+        font-weight: 700;
+        @include xl {
+            font-size: 20px;
+        }
+        @include lg {
+            font-size: 24px;
+        }
+        @include md {
+            font-size: 20px;
+        }
+    }
+    .box-text {
+        @include xl {
+            font-size: 14px;
+        }
+        @include lg {
+            font-size: 16px;
+        }
+        @include md {
+            font-size: 14px;
+        }
+    }
+}
+
+/* Process Card 3---------------------------------- */
+.process-bg-line3-1 {
+    img {
+        width: 100%;
+    }
+    @include xxl {
+        top: 180px !important;
+    }
+    @include ml {
+        display: none;
+    }
+}
+.process-card-wrap3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    @include ml {
+        margin-left: 0;
+        gap: 24px;
+    }
+}
+.process-card3 {
+    text-align: center;
+    padding: 0px 30px 50px;
+    align-self: self-start;
+    position: relative;
+    width: 100%;
+    max-width: 324px;
+    min-height: 344px;
+    z-index: 1;
+    @include vxs {
+        min-height: auto;
+        padding: 30px;
+    }
+    &:nth-child(even) {
+        margin-top: 162px;
+        @include ml {
+            margin-top: 0;
+        }
+    }
+    .process-card-bg {
+        position: absolute;
+        inset: 20px 0 0 0;
+        background: $theme-color;
+        border-radius: 50%;
+        z-index: -1;
+        border: 1px dashed $border-color;
+        @include vxs {
+            border-radius: 16px;
+            inset: 0;
+        }
+    }
+    .box-img {
+        display: inline-block;
+        margin-bottom: 28px;
+        border: 6px solid $white-color;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 122px;
+        img {
+            border-radius: 50%;
+        }
+    }
+    .box-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        letter-spacing: -0.02em;
+        margin-top: -0.7em;
+        display: block;
+        @include xxl {
+            font-size: 20px;
+        }
+    }
+    .box-text {
+        line-height: 1.75em;
+        letter-spacing: -0.02em;
+        max-width: 211px;
+        margin-left: auto;
+        margin-right: auto;
+        color: $body-color;
+    }    
+}
+
+/* Process Card 4---------------------------------- */
+.process-bg-line4-1 {
+    padding: 0 157px;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+    @include ml {
+        display: none;
+    }
+}
+.process-card-wrap4 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 42px 0 58px;
+    @include ml {
+        gap: 24px;
+        padding: 0;
+        justify-content: center;
+        margin-top: -10px;
+    }
+}
+.process-card4 {
+    text-align: center;
+    padding: 0px 30px 35px;
+    align-self: self-start;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    max-width: 312px;
+    @include ml {
+        max-width: 294px;
+    }
+    @include xl {
+        max-width: 261px;
+    }
+    @include vxs {
+        min-height: auto;
+        max-width: none;
+        padding: 30px;
+    }
+    &:nth-child(even) {
+        margin-top: 162px;
+        @include ml {
+            margin-top: 0;
+        }
+    }
+    .process-card-bg {
+        position: absolute;
+        inset: 40px 0 0 0;
+        background: $smoke-color;
+        border-radius: 24px;
+        z-index: -1;
+        @include vxs {
+            border-radius: 16px;
+            inset: 0;
+        }
+    }
+    .box-img {
+        display: inline-block;
+        margin-bottom: 28px;
+        border: 10px solid $white-color;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 122px;
+        img {
+            border-radius: 50%;
+        }
+    }
+    .box-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        letter-spacing: -0.02em;
+        margin-top: -0.7em;
+        display: block;
+        @include xxl {
+            font-size: 20px;
+        }
+    }
+    .box-text {
+        line-height: 1.75em;
+        letter-spacing: -0.02em;
+        max-width: 211px;
+        margin-left: auto;
+        margin-right: auto;
+        color: $body-color;
+        @include xl {
+            font-size: 14px;
+        }
+    }    
+}
+
+/* Process Card 5---------------------------------- */
+.process-img-box5 {
+    border-radius: 24px;
+    overflow: hidden;
+    margin-left: -36px;
+    display: inline-block;
+    @include xl {
+        margin-left: 0;
+    }
+}
+.process-card-wrap5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding-bottom: 60px;
+    margin-right: 112px;
+    @include xl {
+        margin-right: 0;
+    }
+    @include xs {
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 0;
+    }
+}
+.process-card5 {
+    background: $white-color;
+    border-radius: 24px;
+    padding: 34px;
+    &:nth-child(even) {
+        transform: translateY(60px);
+        @include xs {
+            transform: none;
+        }
+    }
+    .box-subtitle {
+        margin-bottom: 24px;
+        margin-top: -0.15em;
+        color: $theme-color;
+        letter-spacing: -0.02em;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    .box-text {
+        letter-spacing: -0.02em;
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+    @include xl {
+        padding: 30px 20px;
+    }
+    @include lg {
+        padding: 40px;
+    }
+    @include md {
+        padding: 30px;
+    }
+    @include sm {
+        padding: 30px 20px;
+        .box-title {
+            font-size: 20px;
+        }
+        .box-text {
+            font-size: 14px;
+        }
+    }
+    @include xs {
+        border-radius: 16px;
+    }
+}

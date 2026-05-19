@@ -1,0 +1,343 @@
+.swiper-wrapper.row {
+    flex-wrap: nowrap;
+}
+.th-slider {
+    &.has-shadow {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin: -25px -12px;
+        .swiper-wrapper {
+            padding: 25px 0;
+        }
+    }
+    .nav.nav-tabs {
+        flex-wrap: nowrap;
+        border-bottom: 0;
+        .swiper-slide.nav-item {
+            // width: 100%;
+        }
+    }
+}
+.swiper-fade {
+    .swiper-slide {
+        transition: 0.6s ease-in-out;
+        opacity: 0 !important;
+        &.swiper-slide-active {
+            opacity: 1 !important;
+        }
+    }
+    .swiper-slide-prev {
+        opacity: 0;
+    }
+}
+.swiper-pagination-bullets {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin: 50px 0 0px 0;
+    line-height: 30px;
+    height: 30px;
+    .swiper-pagination-bullet {
+        display: inline-block;
+        --swiper-pagination-bullet-size: 16px;
+        --swiper-pagination-bullet-horizontal-gap: 8px;
+        opacity: 1;
+        background-color: transparent;
+        border: 1px solid rgba($color: #D3DBE2, $alpha: 0.5);
+        position: relative;
+        transition: 0.4s;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            transform: scale(0);
+            background: $theme-color;
+            border-radius: inherit;
+            transition: 0.4s ease-in-out;
+        }
+        &.swiper-pagination-bullet-active {
+            border-color: $theme-color;
+            &:before {
+                transform: scale(1);
+                border-color: $theme-color;
+            }
+        }
+    }
+}
+.slider-pagination {
+    bottom: 0 !important;
+    &.style2 {
+        .swiper-pagination-bullet {
+            background: $white-color;
+            --swiper-pagination-bullet-size: 6px;
+            &:before {
+                transform: scale(0);
+                border: 1px solid $theme-color;
+            }
+            &.swiper-pagination-bullet-active {
+                background: $white-color;
+                &:before {
+                    border: 1px solid $white-color;
+                }
+            }
+        }
+    }
+    &.style3 {
+        .swiper-pagination-bullet {
+            background: $theme-color;
+            transition: 0.4s;
+            --swiper-pagination-bullet-size: 16px;
+            --swiper-pagination-bullet-horizontal-gap: 8px;
+            &:before {
+                display: none;
+            }
+            &.swiper-pagination-bullet-active {
+                background: $theme-color2;
+                transform: scale(1.5);
+            }
+        }
+    }
+}
+
+.slider-pagination.swiper-pagination-progressbar {
+    width: -webkit-fill-available;
+    position: relative;
+    height: 2px;
+    background: $border-color;
+    top: auto;
+    bottom: 0px;
+    margin: 70px 0px 0;
+    .swiper-pagination-progressbar-fill {
+        height: 2px;
+        top: auto;
+        bottom: 0;
+        background: $theme-color;
+    }
+}
+.slider-area {
+    position: relative;
+}
+.slider-arrow {
+    display: inline-block;
+    padding: 0;
+    background-color: $theme-color;
+    color: $white-color;
+    position: absolute;
+    top: 50%;
+    border: none;
+    left: var(--pos-x, -120px);
+    width: var(--icon-size, 48px);
+    height: var(--icon-size, 48px);
+    line-height: var(--icon-size, 48px);
+    font-size: var(--icon-font-size, 18px);
+    margin-top: calc(var(--icon-size, 56px) / -2);
+    z-index: 3;
+    border-radius: 99px;
+    &.default {
+        position: relative;
+        --pos-x: 0;
+        margin-top: 0;
+    }
+
+    &.slider-next {
+        right: var(--pos-x, -120px);
+        left: auto;
+    }
+
+    &:hover {
+        background-color: $title-color;
+        color: $white-color;
+    }
+    &.style2 {
+        background: $smoke-color;
+        color: $title-color;
+        --icon-size: 48px;
+        &:hover {
+            background: $theme-color;
+            color: $white-color;
+        }
+    }
+    &.style3 {
+        background: transparent;
+        border: 1px solid rgba($color: #1E1E1E, $alpha: 0.3);
+        width: 80px;
+        height: 48px;
+        color: $title-color;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background: $theme-color;
+            border: 1px solid $theme-color;
+            color: $white-color;
+        }
+    }
+    &.style4 {
+        background: $smoke-color2;
+        color: $title-color;
+        --icon-size: 48px;
+        &:hover {
+            background: $theme-color;
+            color: $white-color;
+        }
+    }
+    &.style5 {
+        background: $white-color;
+        color: $title-color;
+        --icon-size: 48px;
+        &:hover {
+            background: $theme-color;
+            color: $white-color;
+        }
+    }
+    &.style6 {
+        background: $theme-color;
+        color: $white-color;
+        &:hover {
+            background: $theme-color2;
+            color: $white-color;
+        }
+    }
+    &.style7 {
+        --icon-size: 56px;
+        background: transparent;
+        border: 1px solid rgba($color: #1E1E1E, $alpha: 0.3);
+        color: $title-color;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background: $theme-color;
+            border: 1px solid $theme-color;
+            color: $white-color;
+        }
+    }
+    &.style8 {
+        --icon-size: 64px;
+        background: $white-color;
+        border: 1px solid $theme-color;
+        color: $title-color;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background: $theme-color;
+            border: 1px solid $theme-color;
+            color: $white-color;
+        }
+    }
+    &.style9 {
+        color: $white-color;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 10px 30px rgba(136, 110, 255, 0.3);
+        background: linear-gradient(135deg, #FF8AB6 0%, #F35886 100%);
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(113.41deg, #AC9AFF 13.2%, #886EFF 88.3%);
+            border-radius: 50%;
+            z-index: -1;
+            transition: 0.4s;
+        }
+        &:hover {
+            color: $white-color;
+            &:after {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.arrow-margin {
+    .slider-arrow {
+        top: calc(50% - 30px);
+    }
+}
+
+.arrow-wrap {
+    position: relative;
+    .slider-arrow {
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.4);
+    }
+
+    &:hover {
+        .slider-arrow {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+    }
+}
+.slider-pagination-wrap {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .slider-arrow {
+        flex: none;
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        display: block;
+        margin: 0;
+    }
+    .slider-pagination {
+        margin-top: 0;
+    }
+}
+@include xxl {
+    .slider-arrow {
+        --arrow-horizontal: -20px;
+        --pos-x: -30px;
+    }
+}
+
+@include ml {
+    .slider-arrow {
+        --arrow-horizontal: 40px;
+        --pos-x: -30px;
+    }
+}
+@include md {
+    .slider-arrow {
+        display: none;
+    }
+}
+.icon-box {
+    .slider-arrow {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+    @include md {
+        .slider-arrow {
+            display: inline-block !important;
+        }
+    }
+}
+@include md {
+    .slider-arrow {
+        --icon-size: 40px;
+        line-height: 38px;
+        margin-right: 40px;
+        font-size: 14px;
+
+        &.slider-next {
+            margin-right: 0;
+        }
+    }
+
+    .slick-dots {
+        margin: 40px 0 0 0;
+    }
+    .icon-box {
+        .slider-arrow {
+            margin-right: 0;
+        }
+    }
+}

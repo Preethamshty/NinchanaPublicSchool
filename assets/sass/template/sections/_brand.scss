@@ -1,0 +1,104 @@
+/* Brand 1 ---------------------------------- */
+.brand-wrap1 {
+    .brand-wrap-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: -0.25em;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        span {
+            flex: none;
+        }
+        &:before,
+        &:after {
+            content: '';
+            position: relative;
+            height: 1px;
+            display: inline-block;
+            width: -webkit-fill-available;
+            background: $border-color;
+        }
+    }
+    @include xs {
+        .brand-wrap-title {
+            font-size: 24px;
+        }
+    }
+}
+.brand-box {
+    display: grid;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    transition: 0.4s ease-in-out;
+    min-height: 50px;
+    img {
+        transition: 0.4s;
+        filter: grayscale(9);
+    }
+    &:hover {
+        img {
+            filter: none;
+            transform: scale(0.95);
+        }
+    }
+}
+/* Brand 2 ---------------------------------- */
+.brand-wrap2 {
+    .brand-wrap-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: -0.25em;
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        span {
+            flex: none;
+        }
+    }
+    @include xs {
+        .brand-wrap-title {
+            font-size: 24px;
+        }
+    }
+}
+/* Brand 5 ---------------------------------- */
+.brand-wrap5 {
+    max-width: 1880px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 24px;
+    padding: 55px;
+    @include xxl {
+        border-radius: 0;
+    }
+    @include md {
+        padding: 40px;
+    }
+    @include xs {
+        padding: 30px 15px;
+    }
+}
+.brand-box2 {
+    display: grid;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    transition: 0.4s ease-in-out;
+    min-height: 50px;
+    img {
+        transition: 0.4s;
+        opacity: 0.5;
+    }
+    &:hover {
+        img {
+            transform: scale(0.95);
+            opacity: 1;
+        }
+    }
+}

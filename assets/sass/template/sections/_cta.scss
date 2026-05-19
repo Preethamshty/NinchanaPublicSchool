@@ -1,0 +1,621 @@
+//Call to action 1---------------------------------------
+.cta-area-1 {
+    &:before {
+        mix-blend-mode: hue;
+    }
+    &.style2 {
+        border-radius: 0 0 300px 300px;
+        @include xxl {
+            border-radius: 0 0 100px 100px;
+        }
+        @include xl {
+            border-radius: 0 0 50px 50px;
+        }
+        @include xs {
+            border-radius: 0 0 30px 30px;
+        }
+    }
+}
+.cta-wrap1 {
+    padding: 100px 0 80px;
+    position: relative;
+    z-index: 1;
+    .cta-img1-1 {
+        margin-bottom: -220px;
+        @include ml {
+            margin-bottom: -120px;
+        }
+        @include lg {
+            margin-bottom: -60px;
+        }
+    }
+    @include md {
+        padding: 80px 0;
+    }
+}
+.cta-card {
+    text-align: center;
+    .box-text {
+        font-size: 16px;
+        font-weight: 600;
+        color: $white-color;
+    }
+}
+
+//Call to action 2---------------------------------------
+.cta-bg-shape2-1 {
+    @include xxl {
+        display: none;
+    }
+}
+.cta-card2 {
+    border-radius: 30px;
+    display: flex;
+    padding: 75px 0 75px 40px;
+    overflow: hidden;
+    justify-content: space-between;
+    .title-area {
+        align-self: center;
+    }
+    .sec-title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.357;
+        @include xl {
+            font-size: 24px;
+        }
+    }
+    .box-thumb {
+        position: relative;
+        bottom: -75px;
+        margin-top: -148px;
+        margin-left: -10px;
+        flex: none;
+        align-self: self-end;
+        img {
+            object-fit: cover;
+        }
+    }
+    @include xl {
+        .title-area {
+            min-width: 280px;
+        }
+        .box-thumb {
+            flex: auto;
+        }
+    }
+    @include lg {
+        padding: 60px 40px;
+        .title-area {
+            min-width: auto;
+        }
+        .box-thumb {
+            display: none;
+        }
+    }
+    @include md {
+        padding: 60px 0 60px 40px;
+        .title-area {
+            width: 280px;
+        }
+        .box-thumb {
+            display: block;
+            flex: none;
+        }
+    }
+    @include sm {
+        .box-thumb {
+            flex: auto;
+        }
+    }
+    @include xs {
+        padding: 50px 30px;
+        border-radius: 24px;
+        .title-area {
+            width: 100%;
+        }
+        .box-thumb {
+            display: none;
+        }
+    }
+}
+
+//Call to action 3---------------------------------------
+.cta-wrap3 {
+    &:before {
+        mix-blend-mode: hue;
+    }
+}
+.cta-img3-1 {
+    right: 282px;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    .cta-bg-shape3-1 {
+        position: absolute;
+        background: $theme-color2;
+        inset: 134px -169px 0 -56px;
+        z-index: -1;
+        @include sm {
+            inset: 100px -100px 0 -56px;
+        }
+        @include xs {
+            inset: 50px -50px 0 -50px;
+        }
+        @include vxs {
+            inset: 30px -50px 0 -50px;
+        }
+    }
+    .cta-bg-shape3-2 {
+        position: absolute;
+        background: $theme-color;
+        inset: calc(134px + 18px) calc(-169px + 18px) 0 calc(-56px + 14px);
+        z-index: -1;
+        @include sm {
+            inset: calc(100px + 18px) calc(-100px + 18px) 0 calc(-56px + 14px);
+        }
+        @include xs {
+            inset: calc(50px + 18px) calc(-50px + 18px) 0 calc(-50px + 14px);
+        }
+        @include vxs {
+            inset: calc(30px + 18px) calc(-60px + 18px) 0 calc(-55px + 14px);
+        }
+    }
+    @include xxl {
+        right: 180px;
+    }
+    @include ml {
+        max-width: 480px;
+    }
+    @include xl {
+        max-width: 420px;
+    }
+    @include lg {
+        position: relative;
+        right: 0;
+        left: 50%;
+        bottom: -120px;
+        transform: translate(-50%, 0);
+        max-width: none;
+        display: inline-block;
+    }
+    @include md {
+        bottom: -80px;
+    }
+    @include sm {
+        margin: 0 100px;
+        width: -webkit-fill-available;
+        left: 0;
+        right: 0;
+        transform: none;
+    }
+    @include xs {
+        margin: 0 80px;
+    }
+    @include vxs {
+        margin: 0 65px;
+    }
+}
+
+//Call to action 4---------------------------------------
+.cta-wrap4 {
+    &:before {
+        mix-blend-mode: hue;
+    }
+    .cta-link {
+        display: block;
+        font-size: 32px;
+        font-weight: 700;
+        font-family: $title-font;
+        letter-spacing: -0.02em;
+        color: #FFBF00;
+        &:hover {
+            color: $white-color;
+        }
+        @include lg {
+            font-size: 24px;
+        }
+    }
+}
+.cta-img4-1 {
+    right: 192px;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    .cta-bg-shape4-1 {
+        position: absolute;
+        inset: -30px 35px -163px 24px;
+        background: $theme-color;
+        mix-blend-mode: overlay;
+        opacity: 0.2;
+        border-radius: 50%;
+        z-index: -1;
+        @include lg {
+            inset: -10px 15px -223px 15px;
+        }
+        @include md {
+            inset: 30px 25px -243px 25px;
+        }
+        @include sm {
+            inset: 30px 25px -173px 25px;
+        }
+        @include xs {
+            inset: 30px 25px -111px 25px;
+        }
+    }
+    .cta-bg-shape4-2 {
+        position: absolute;
+        inset: -143px -30px -163px;
+        background: $theme-color;
+        opacity: 0.1;
+        border-radius: 50%;
+        mix-blend-mode: overlay;
+        z-index: -2;
+        @include xxl {
+            inset: -143px -30px -163px;
+        }
+        @include lg {
+            inset: -83px -30px -223px;
+        }
+        @include md {
+            inset: -30px 0 -233px;
+        }
+        @include sm {
+            inset: -30px 0 -163px;
+        }
+        @include xs {
+            inset: -30px 0 -101px;
+        }
+    }
+    @include xxl {
+        right: 60px;
+        max-width: 700px;
+    }
+    @include xl {
+        max-width: 600px;
+    }
+    @include lg {
+        position: relative;
+        right: 0;
+        left: 50%;
+        bottom: -120px;
+        transform: translate(-50%, 0);
+        max-width: none;
+        display: inline-block;
+    }
+    @include md {
+        bottom: -80px;
+    }
+    @include sm {
+        margin: 0 30px;
+        width: -webkit-fill-available;
+        left: 0;
+        right: 0;
+        transform: none;
+    }
+}
+
+//Call to action 6---------------------------------------
+.cta-wrap6 {
+    margin: 0 -120px;
+    border-radius: 60px;
+    position: relative;
+    z-index: 1;
+    @include md {
+        border-radius: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    @include sm {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @include xs {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 804px;
+        height: 804px;
+        left: calc(50% - 804px/2);
+        top: calc(50% - 804px/2);
+        border-radius: 50%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.02) 0%, rgba(205, 245, 234, 0.5) 100%);
+        z-index: -1;
+        @include lg {
+            width: 700px;
+            height: 700px;
+            left: calc(50% - 700px/2);
+            top: calc(50% - 700px/2);
+        }
+        @include md {
+            width: 500px;
+            height: 500px;
+            left: calc(50% - 500px/2);
+            top: calc(50% - 500px/2);
+        }
+        @include sm {
+            display: none;
+        }
+    }
+    @include xxl {
+        margin: 0;
+    }
+    &.style2 {
+        &:after {
+            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.02) 0%, rgba(214, 230, 252, 0.5) 100%);
+        }
+    }
+    &.style3 {
+        &:after {
+            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.004) 0%, rgba(214, 230, 252, 0.1) 100%);
+        }
+    }
+}
+.cta-thumb6 {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+    transform: scale(0.7);
+    &.cta-thumb6-1 {
+        left: 80px;
+        top: 85px;
+        @include xxl {
+            left: 60px;
+        }
+        @include xl {
+            left: 40px;
+        }
+    } 
+    &.cta-thumb6-2 {
+        left: 296px;
+        top: 30px;
+        @include xxl {
+            left: 250px;
+            top: 50px;
+        }
+        @include xl {
+            left: 200px;
+        }
+    }
+    &.cta-thumb6-3 {
+        left: 208px;
+        top: calc(50% - 110px/2);
+        @include xxl {
+            left: 150px;
+        }
+    }
+    &.cta-thumb6-4 {
+        left: 80px;
+        bottom: 80px;
+        @include xxl {
+            left: 60px;
+        }
+        @include xl {
+            left: 40px;
+        }
+    }
+    &.cta-thumb6-5 {
+        left: 296px;
+        bottom: 30px;
+        @include xxl {
+            left: 250px;
+            bottom: 50px;
+        }
+        @include xl {
+            left: 200px;
+        }
+    }
+    &.cta-thumb6-6 {
+        right: 80px;
+        top: 85px;
+        @include xxl {
+            right: 60px;
+        }
+        @include xl {
+            right: 40px;
+        }
+    } 
+    &.cta-thumb6-7 {
+        right: 296px;
+        top: 30px;
+        @include xxl {
+            right: 250px;
+            top: 50px;
+        }
+        @include xl {
+            right: 200px;
+        }
+    }
+    &.cta-thumb6-8 {
+        right: 208px;
+        top: calc(50% - 110px/2);
+        @include xxl {
+            right: 150px;
+        }
+    }
+    &.cta-thumb6-9 {
+        right: 80px;
+        bottom: 80px;
+        @include xxl {
+            right: 60px;
+        }
+        @include xl {
+            right: 40px;
+        }
+    }
+    &.cta-thumb6-10 {
+        right: 296px;
+        bottom: 30px;
+        @include xxl {
+            right: 250px;
+            bottom: 50px;
+        }
+        @include xl {
+            right: 200px;
+        }
+    }
+}
+
+//Call to action 8---------------------------------------
+.cta-wrap8 {
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 213px 0;
+    @include lg {
+        padding: 200px 0;
+    }
+    @include md {
+        padding: 120px 0;
+    }
+    @include sm {
+        padding: 80px 0;
+    }
+    .cta-bg-shape8-1 {
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $theme-color;
+            mix-blend-mode: hue;
+            z-index: -1;
+        }
+        @include md {
+            mask-image: none !important;
+        }
+    }
+    .cta-thumb-wrap8-1 {
+        position: absolute;
+        left: 130px;
+        bottom: 0;
+        @include xxl {
+            left: 20px;
+        }
+        @include xl {
+            max-width: 330px;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+    .cta-thumb-wrap8-2 {
+        position: absolute;
+        right: 174px;
+        bottom: 0;
+        @include xxl {
+            right: 20px;
+        }
+        @include xl {
+            max-width: 220px;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+}
+
+//Call to action 9---------------------------------------
+.cta-wrap9 {
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 200px 0;
+    @include lg {
+        padding: 200px 0;
+    }
+    @include md {
+        padding: 120px 0;
+    }
+    @include sm {
+        padding: 80px 0;
+    }
+    .cta-bg-shape9-1 {
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $theme-color2;
+            mix-blend-mode: hue;
+            z-index: -1;
+        }
+        @include md {
+            mask-image: none !important;
+        }
+    }
+    .cta-thumb-wrap9-1 {
+        position: absolute;
+        left: 103px;
+        bottom: 0;
+        @include xxl {
+            left: 20px;
+        }
+        @include xl {
+            left: -20px;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+    .cta-thumb-wrap9-2 {
+        position: absolute;
+        right: 11px;
+        bottom: 0;
+        @include xxl {
+            right: -100px;
+        }
+        @include xl {
+            right: -150px;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+}
+
+//Call to action 10---------------------------------------
+.cta-wrap10 {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $theme-color;
+        mix-blend-mode: hue;
+        z-index: -1;
+    }
+    .cta-thumb-wrap10-1 {
+        position: absolute;
+        left: 130px;
+        bottom: 0;
+        @include xxl {
+            left: 20px;
+            width: 330px;
+        }
+        @include xl {
+            max-width: 330px;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+    .cta-thumb-wrap10-2 {
+        position: absolute;
+        right: 174px;
+        bottom: 0;
+        @include xxl {
+            right: 20px;
+            width: 220px;
+        }
+        @include xl {
+            max-width: 220px;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+}

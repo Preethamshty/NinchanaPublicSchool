@@ -1,0 +1,63 @@
+/* Blog Card ---------------------------------- */
+.blog-title {
+    font-size: 30px;
+}
+.blog-card {
+    overflow: hidden;
+    .blog-img {
+        overflow: hidden;
+        border-radius: 16px;
+        position: relative; 
+        margin-bottom: 32px;
+        img {
+            width: 100%;
+            transition: 0.4s ease-in-out;
+        }
+    }
+    .blog-content {
+        transition: 0.4s;
+        position: relative;
+        z-index: 1;
+    }
+    .box-title {
+        margin-top: 9px;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0;
+        letter-spacing: -0.02em;
+        a {
+            background-image: linear-gradient(to left, $theme-color, $theme-color);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 0 2px;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                background-size: 100% 2px;
+            }
+        }
+    }
+    .th-btn {
+        margin-top: 26px;
+    }
+    @include lg {
+        .box-title {
+            font-size: 18px;
+        }
+    }
+    @include sm {
+        .box-title {
+            font-size: 20px;
+        }
+    }
+}
+
+/* Blog Card 2---------------------------------- */
+.blog-card.style2 {
+    .box-title {
+        font-size: 24px;
+        max-width: 450px;
+        @include lg {
+            font-size: 20px;
+        }
+    }
+}

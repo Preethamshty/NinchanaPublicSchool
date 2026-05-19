@@ -1,0 +1,23 @@
+/* Tab Menu 1 ------------------------------------*/
+.tab-menu1 {
+    gap: 14px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    .tab-btn {
+        font-size: 14px;
+        padding: 10px 24px;
+        font-family: $title-font;
+        font-weight: 700;
+        background-color: $white-color;
+        border-radius: 6px;
+        box-shadow: 0px 10px 50px rgba(0, 30, 66, 0.08);
+        border-radius: 30px;
+        border: 0;
+        &.active {
+            background-color: $theme-color;
+            color: $white-color;
+            box-shadow: 0px 10px 30px rgba(136, 110, 255, 0.3);
+        }
+    }
+}
